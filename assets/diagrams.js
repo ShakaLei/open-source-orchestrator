@@ -1,5 +1,6 @@
 /* diagrams.js — render chord-shape entries (shapes/*.json schema) as inline SVG.
- * 4 diagram types: guitar grid, ukulele grid, mini piano, bass positions.
+ * Diagram types: fret grids (guitar/uke/mandolin), banjo grid with g-drone
+ * column, mini piano, bass positions.
  * JS port of shapes/render_diagram.py (CC0). Black-on-white, print-friendly.
  */
 (function () {
@@ -18,8 +19,8 @@
     { id: "ukulele", label: "ukulele", type: "fretted" },
     { id: "piano", label: "piano", type: "keyboard" },
     { id: "bass", label: "bass", type: "positions" },
-    { id: "mandolin", label: "mandolin", type: "fretted" },   // shapes in progress
-    { id: "banjo", label: "banjo", type: "fretted" },         // shapes in progress
+    { id: "mandolin", label: "mandolin", type: "fretted" },
+    { id: "banjo", label: "banjo", type: "fretted-drone" },
   ];
 
   // ------------------------------------------------- lookup
@@ -112,6 +113,33 @@
     return gridSvg(d.frets, d.fingers, d.barres, tuning, null);
   }
 
+  // 5-string open-G banjo: 4 fretted strings (D G B D) as a normal grid, plus
+  // the short 5th g-drone as a dashed column on the left — ○ = open drone is a
+  // chord tone, ✕ = clashes (omit the 5th string or spike/capo it).
+  function frettedDroneSvg(d) {
+    const fretted = (d.tuning && d.tuning.length === d.frets.length + 1)
+      ? d.tuning.slice(1) : d.tuning;           // "gDGBD" -> "DGBD"
+    let core = gridSvg(d.frets, d.fingers, d.barres, fretted.split(""), null);
+    const fits = d.drone ? !!d.drone.fits_open : (d.drone_fits !== undefined ? d.drone_fits : true);
+    const dx = 24, left = 30, top = 34;
+    core = core.replace(/width="([\d.]+)"/, (m, v) => `width="${parseFloat(v) + dx}"`);
+    core = core.replace(/viewBox="0 0 ([\d.]+) /, (m, v) => `viewBox="0 0 ${parseFloat(v) + dx} `);
+    const i = core.indexOf(">"), head = core.slice(0, i);
+    let body = core.slice(i + 1).replace(/<\/svg>$/, "");
+    const ybm = body.match(/y2="([\d.]+)" stroke="#1b1b1b" stroke-width="1.2"/);
+    const ybot = ybm ? parseFloat(ybm[1]) : top + 26 * 4;
+    const ytop = top + (ybot - top) * 0.25;
+    const x0 = left - dx + 4;
+    const marker = fits
+      ? `<circle cx="${x0}" cy="${top - 14}" r="4.5" fill="none" stroke="${INK}" stroke-width="1.4"/>`
+      : `<text x="${x0}" y="${top - 10}" font-size="13" fill="${INK}" text-anchor="middle">&#10005;</text>`;
+    const extra =
+      `<line x1="${x0}" y1="${ytop}" x2="${x0}" y2="${ybot}" stroke="${FAINT}" stroke-width="1.2" stroke-dasharray="3,3"/>` +
+      marker +
+      `<text x="${x0}" y="${ybot + 16}" font-size="11" fill="${FAINT}" text-anchor="middle" font-style="italic">g</text>`;
+    return `${head}>${extra}<g transform="translate(${dx},0)">${body}</g></svg>`;
+  }
+
   function positionsSvg(b) {
     const order = Array.isArray(b.tuning) ? b.tuning : b.tuning.split("");
     const frets = order.map(() => -1), labels = order.map(() => null);
@@ -161,7 +189,8 @@
     return out.join("");
   }
 
-  const TYPE_RENDERERS = { fretted: frettedSvg, keyboard: keyboardSvg, positions: positionsSvg };
+  const TYPE_RENDERERS = { fretted: frettedSvg, "fretted-drone": frettedDroneSvg,
+    keyboard: keyboardSvg, positions: positionsSvg };
 
   function render(sym, instrumentId) {
     const e = lookup(sym);

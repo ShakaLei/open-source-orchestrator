@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-"""Render a chord-shape entry (see README.md schema) into 4 inline SVGs:
-guitar grid, ukulele grid, mini piano with pressed keys, bass positions.
+"""Render a chord-shape entry (see README.md schema) into inline SVGs:
+guitar grid, ukulele grid, mandolin grid (GDAE), banjo grid (gDGBD with
+dashed drone-string column: ○ = open g drone fits, ✕ = omit/spike it),
+mini piano with pressed keys, bass positions.
 
 Pure Python stdlib, print-friendly (black on white, grayscale-safe).
 
@@ -112,6 +114,54 @@ def ukulele_svg(entry):
     return _grid_svg(u["frets"], u.get("fingers"), u.get("barres"), u["tuning"])
 
 
+def mandolin_svg(entry):
+    """4-course grid, GDAE low->high (each line = one double course)."""
+    m = entry["mandolin"]
+    return _grid_svg(m["frets"], m.get("fingers"), m.get("barres"), m["tuning"])
+
+
+def banjo_svg(entry):
+    """5-string open-G banjo: 4 fretted strings (D G B D) as a normal grid,
+    plus the short 5th drone string as a dashed column on the left —
+    marked ● g (open drone fits the chord) or ✕ (clashes: omit / spike it)."""
+    b = entry["banjo"]
+    core = _grid_svg(b["frets"], b.get("fingers"), b.get("barres"), "DGBD")
+    drone = b.get("drone", {})
+    fits = drone.get("fits_open", False)
+    sp, left, top = 22, 30, 34
+    dx = 24                      # extra width for the drone column
+    # shift the whole core diagram right by dx, widen the canvas
+    import re
+    def bump_w(mo):
+        return f'width="{float(mo.group(1)) + dx}"'
+    core = re.sub(r'width="([\d.]+)"', bump_w, core, count=1)
+    core = re.sub(r'viewBox="0 0 ([\d.]+) ', lambda mo: f'viewBox="0 0 {float(mo.group(1))+dx} ', core, count=1)
+    core = core.replace('<svg ', f'<svg data-banjo="1" ', 1)
+    # wrap all core content in a translated group
+    head, body = core.split(">", 1)
+    body = body.rsplit("</svg>", 1)[0]
+    x0 = left - dx + 4           # drone column x (in un-translated coords, left of grid)
+    # drone: dashed line over the lower 3/4 of the window (the short string
+    # physically starts at the 5th fret — drawn symbolically)
+    nfr_px = None
+    # find grid height from the first string line we drew (top..top+fh*nfr)
+    m2 = re.search(r'y2="([\d.]+)" stroke="%s" stroke-width="1.2"' % INK, body)
+    ybot = float(m2.group(1)) if m2 else top + 26 * 4
+    ytop = top + (ybot - top) * 0.25
+    if fits:
+        marker = (f'<circle cx="{x0}" cy="{top-14}" r="4.5" fill="none" '
+                  f'stroke="{INK}" stroke-width="1.4"/>')
+    else:
+        marker = (f'<text x="{x0}" y="{top-10}" font-size="13" fill="{INK}" '
+                  f'text-anchor="middle">&#10005;</text>')
+    extra = (f'<line x1="{x0}" y1="{ytop}" x2="{x0}" y2="{ybot}" stroke="{FAINT}" '
+             f'stroke-width="1.2" stroke-dasharray="3,3"/>'
+             f'{marker}'
+             f'<text x="{x0}" y="{ybot+16}" font-size="11" fill="{FAINT}" '
+             f'text-anchor="middle" font-style="italic">g</text>')
+    return f'{head}>{extra}<g transform="translate({dx},0)">{body}</g></svg>'
+
+
 def bass_svg(entry):
     """Root/fifth/octave positions on an EADG grid, labelled R / 5 / 8."""
     b = entry["bass"]
@@ -198,15 +248,23 @@ def piano_svg(entry, low_midi=60, n_white=15):
 # ---------------------------------------------------------------- assembly
 
 def render_all(entry):
-    return {"guitar": guitar_svg(entry), "ukulele": ukulele_svg(entry),
-            "piano": piano_svg(entry), "bass": bass_svg(entry)}
+    out = {"guitar": guitar_svg(entry), "ukulele": ukulele_svg(entry),
+           "piano": piano_svg(entry), "bass": bass_svg(entry)}
+    if "mandolin" in entry:
+        out["mandolin"] = mandolin_svg(entry)
+    if "banjo" in entry:
+        out["banjo"] = banjo_svg(entry)
+    return out
+
+
+INSTRUMENT_ORDER = ["guitar", "ukulele", "mandolin", "banjo", "piano", "bass"]
 
 
 def chord_html(entry):
     svgs = render_all(entry)
     cells = "".join(
         f'<figure class="d"><figcaption>{inst}</figcaption>{svgs[inst]}</figure>'
-        for inst in ["guitar", "ukulele", "piano", "bass"])
+        for inst in INSTRUMENT_ORDER if inst in svgs)
     notes = " – ".join(entry["notes"])
     return (f'<section class="chord"><h2>{html.escape(entry["name"])} '
             f'<small>({html.escape(notes)})</small></h2><div class="row">{cells}</div></section>')
