@@ -121,7 +121,63 @@
   "guitar": "chordbook/chords-db (MIT)",
   "ukulele": "chordbook/chords-db (MIT)",
   "piano": "computed, verified vs chordbook",
-  "bass": "computed"
+  "bass": "computed",
+  "mandolin": "computed (BACH first-position search); validated vs pitch classes",
+  "banjo": "computed (BACH first-position search); validated vs pitch classes; drone convention documented"
  },
- "license": "CC0"
+ "license": "CC0",
+ "mandolin": {
+  "frets": [
+   3,
+   1,
+   4,
+   3
+  ],
+  "fingers": [
+   2,
+   1,
+   4,
+   3
+  ],
+  "barres": [],
+  "baseFret": 1,
+  "curated": false,
+  "tuning": "GDAE",
+  "midi": [
+   58,
+   63,
+   73,
+   79
+  ]
+ },
+ "banjo": {
+  "frets": [
+   1,
+   0,
+   2,
+   1
+  ],
+  "fingers": [
+   1,
+   0,
+   3,
+   2
+  ],
+  "barres": [],
+  "baseFret": 1,
+  "curated": false,
+  "tuning": "gDGBD",
+  "midi": [
+   51,
+   55,
+   61,
+   63
+  ],
+  "drone": {
+   "string": "g (5th, short)",
+   "midi": 67,
+   "fits_open": true,
+   "advice": "open G drone fits this chord"
+  }
+ }
 }

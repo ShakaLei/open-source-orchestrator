@@ -116,8 +116,64 @@
   "guitar": "BACH curated (standard 2x221x)",
   "ukulele": "BACH curated (standard 2423)",
   "piano": "computed, spelled",
-  "bass": "computed (fifth = b5 position)"
+  "bass": "computed (fifth = b5 position)",
+  "mandolin": "computed (BACH first-position search); validated vs pitch classes",
+  "banjo": "computed (BACH first-position search); validated vs pitch classes; drone convention documented"
  },
  "license": "CC0",
- "note": "Half-diminished; bass 'fifth' stop is the FLAT five (C). Added 2026-08-15 for tanta-paura's G-F#\u00f8-Fmaj7-E lament line."
+ "note": "Half-diminished; bass 'fifth' stop is the FLAT five (C). Added 2026-08-15 for tanta-paura's G-F#\u00f8-Fmaj7-E lament line.",
+ "mandolin": {
+  "frets": [
+   2,
+   2,
+   3,
+   2
+  ],
+  "fingers": [
+   1,
+   2,
+   4,
+   3
+  ],
+  "barres": [],
+  "baseFret": 1,
+  "curated": false,
+  "tuning": "GDAE",
+  "midi": [
+   57,
+   64,
+   72,
+   78
+  ]
+ },
+ "banjo": {
+  "frets": [
+   2,
+   2,
+   1,
+   4
+  ],
+  "fingers": [
+   2,
+   3,
+   1,
+   4
+  ],
+  "barres": [],
+  "baseFret": 1,
+  "curated": false,
+  "tuning": "gDGBD",
+  "midi": [
+   52,
+   57,
+   60,
+   66
+  ],
+  "drone": {
+   "string": "g (5th, short)",
+   "midi": 67,
+   "fits_open": false,
+   "advice": "open G clashes - omit the 5th string (or spike/capo it at fret 2)"
+  }
+ }
 }

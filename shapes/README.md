@@ -1,21 +1,27 @@
 # ʻOhana chord-shape database 🎼
 
-Per-chord JSON shape files for **guitar, ukulele, piano, bass** — the trusted
-fingering library behind Matteo Tambussi's multi-instrument chord charts.
-Beginner-playable standard voicings, first position preferred.
+Per-chord JSON shape files for **guitar, ukulele, mandolin, banjo, piano, bass**
+— the trusted fingering library behind Matteo Tambussi's multi-instrument chord
+charts. Beginner-playable standard voicings, first position preferred.
 
 **Coverage:** all 12 roots × {major, minor, 7, m7, maj7, sus2, sus4} = **84 chords** (+1 curated extra: **F#m7b5**, added 2026-08-15 for tanta-paura's lament line — bass 'fifth' stop is the FLAT five),
-**306 chord symbols** resolvable via [`index.json`](index.json) (aliases + enharmonics,
+**310 chord symbols** resolvable via [`index.json`](index.json) (aliases + enharmonics,
 e.g. `F#m`, `Gbm`, `F#min`, `F#-` all → `Fsharp_minor.json`).
 
 ## Files
 
-- `<Root>_<quality>.json` — one chord, all 4 instruments. Root tokens:
+- `<Root>_<quality>.json` — one chord, all 6 instruments. Root tokens:
   `C Csharp D Eb E F Fsharp G Ab A Bb B` · qualities: `major minor 7 m7 maj7 sus2 sus4`.
 - `index.json` — chord symbol → filename map (use this for lookups).
-- `render_diagram.py` — stdlib-only SVG renderer (guitar grid, uke grid, mini piano,
-  bass positions). CLI + library, see its docstring.
-- `preview.html` — self-test render of G, Em, C, D, F#m, Bb.
+- `render_diagram.py` — stdlib-only SVG renderer (guitar grid, uke grid, mandolin
+  grid, banjo grid with drone-string column, mini piano, bass positions).
+  CLI + library, see its docstring.
+- `preview.html` — self-test render of G, Em, C, D, F#m, Bb (all 6 instruments).
+- `web/instruments.json` — **web-ready bundle** for the Open Source Orchestrator
+  tool: instrument config array (id, name, emoji, diagram type, tuning,
+  tuning_midi), each entry carrying a per-chord `shapes` lookup; plus `chords`
+  metadata and the 310-symbol `chord_index`.
+  Rebuild: `python3 /workspace/build_web_bundle.py` (BACH's workspace).
 
 ## Schema (per chord file)
 
@@ -37,6 +43,17 @@ e.g. `F#m`, `Gbm`, `F#min`, `F#-` all → `Fsharp_minor.json`).
     "midi": [42,49,54,57,61,66]
   },
   "ukulele": { /* same shape schema, tuning "GCEA" (reentrant) */ },
+  "mandolin": { /* same shape schema, tuning "GDAE" (4 double courses in fifths;
+                   each frets entry = one course, low G course first) */ },
+  "banjo": {   /* same shape schema on the 4 FRETTED strings only,
+                  tuning "gDGBD" (open G) — frets are [4th,3rd,2nd,1st] = D G B D.
+                  The short 5th string is described separately: */
+    "drone": {
+      "string": "g (5th, short)", "midi": 67,
+      "fits_open": false,          // true = open G drone is a chord tone
+      "advice": "open G clashes - omit the 5th string (or spike/capo it at fret 2)"
+    }
+  },
   "piano": {
     "notes": ["F#4","A4","C#5"], // root position, stacked upward from octave 4
     "midi": [66,69,73]
@@ -63,6 +80,8 @@ enforced by build-time validation of every fret against the chord's pitch classe
 | Part | Source | License |
 |---|---|---|
 | guitar + ukulele fingerings | [chordbook/chords-db](https://github.com/chordbook/chords-db) (active fork of tombatossals/chords-db) | MIT |
+| mandolin fingerings | computed (BACH first-position search, `/workspace/build_shapes_mb.py`), common chords taken from / cross-checked vs [Wikibooks Mandolin/Chords](https://en.wikibooks.org/wiki/Mandolin/Chords) + [mandolinchords.net chart](https://mandolinchords.net/chords/chart/) | — |
+| banjo fingerings (open G) | computed (same search, barre-aware), common chords taken from / cross-checked vs [banjochords.net chart](https://banjochords.net/chords/chart/) + middermusic.com / chordsongs.io | — |
 | piano notes | computed (interval spelling), cross-validated against chordbook piano note names | — |
 | bass positions | computed (root/fifth/octave geometry on EADG) | — |
 | curated overrides | BACH, verified against standard public chord charts | — |
@@ -92,21 +111,48 @@ lists instead, and our own `piano.midi` values are computed correctly from theor
   F `133211`, Bb `x13331`, D7 `xx0212`, G7 `320001`, Am7 `x02010`, Cmaj7 `x32000`,
   Dsus2 `xx0230`, Asus4 `x02230` — plus uke `C 0003 · G 0232 · D 2220 · F 2010 · Bb 3211`.
   All match. (Uke E ships chordbook's `1402`, a widely-taught easier alternative to `4442`.)
-- **Visual:** `preview.html` inspected — nut vs `Nfr` position labels, barre spans,
-  X/O markers, pressed piano keys, bass R/5/8 dots all correct.
+- **Automatic (all 85 × mandolin + banjo, added 2026-08-15):** same pitch-class
+  validation (root, 3rd/sus tone and 7th always required; only a perfect 5th may
+  be omitted — so e.g. F#m7b5's ♭5 can never be dropped). Banjo validation covers
+  the 4 fretted strings; the g-drone is analyzed separately (`drone.fits_open`).
+- **Mandolin cross-check (10 shapes, 2 references each** — Wikibooks
+  Mandolin/Chords + mandolinchords.net chart**):**
+  C `0230` · G `0023` · D `2002` · A `2245` · Em `0220` · Am `2230` · Dm `2001` ·
+  Gm `0013` · G7 `0021` · Gmaj7 `0022` (frets low G course → E course). All match;
+  these ship as curated. (Generator preferred A `2240` — reference `2245` kept.)
+- **Banjo cross-check (13 shapes, 2+ references each** — banjochords.net chart +
+  middermusic.com/chordsongs.io**):** G `0000` · C `2012` · D `0234` · A `2222` ·
+  E `2102` · Em `2002` · Am `2212` · Dm `0233` · D7 `0214` · F `3213` · B `4444` ·
+  Bm `4434` · G7 `0003` (frets 4th→1st string, D G B D). All match; curated.
+  (Generator preferred Bm `0434` — reference barre shape `4434` kept.)
+- **Visual:** `preview.html` inspected (G, Em, C, D, F#m, Bb × 6 instruments) —
+  nut vs `Nfr` position labels, barre spans, X/O markers, drone ○/✕ column,
+  pressed piano keys, bass R/5/8 dots all correct.
+
+### Banjo drone convention 🪕
+
+The 5th string (short, starts at the 5th fret) is a **G drone**, normally played
+open. Each banjo shape records whether that open G is a chord tone
+(`drone.fits_open`). When it clashes (e.g. D, F#m, Bb), the advice field says to
+omit the 5th string or spike/capo it at the nearest fitting fret. Diagrams draw
+the drone as a dashed left column: ○ = ring it open, ✕ = leave it out.
+Banjo maj7/m7 chords have no complete open-position voicing, so those ship as
+standard movable shapes around frets 4–8 — that is normal banjo practice.
 
 ## Rebuild
 
 ```
-python3 /workspace/build_shapes.py    # (BACH's workspace; CHORDSDB_LIB / SHAPES_OUT env-overridable)
+python3 /workspace/build_shapes.py       # guitar/uke/piano/bass (CHORDSDB_LIB / SHAPES_OUT env-overridable)
+python3 /workspace/build_shapes_mb.py    # + mandolin & banjo (theory search + curated refs)
+python3 /workspace/build_web_bundle.py   # -> web/instruments.json
 ```
-Requires a clone of chordbook/chords-db (`lib/*.json`). Build validates everything;
-it fails loudly rather than shipping a wrong diagram.
+`build_shapes.py` requires a clone of chordbook/chords-db (`lib/*.json`). All
+builders validate everything; they fail loudly rather than ship a wrong diagram.
 
 ## Render
 
 ```
-python3 render_diagram.py "F#m"                            # HTML fragment, 4 SVGs
+python3 render_diagram.py "F#m"                            # HTML fragment, 6 SVGs
 python3 render_diagram.py --preview out.html G Em C D      # preview page
 ```
 
