@@ -9,19 +9,81 @@
       "note": "The first songbook of the catalog — machine-detected drafts (CREMA + theory review), lyrics official, chords awaiting Matteo's blessing.",
       "status": "machine-draft-awaiting-blessing",
       "songs": [
-        { "title": "3MILY", "file": "3mily.pro" },
-        { "title": "Be My Friend", "file": "be-my-friend.pro" },
-        { "title": "Burnout", "file": "burnout.pro" },
-        { "title": "Cioccolato Fondente", "file": "cioccolato-fondente.pro" },
-        { "title": "Ginger Game", "file": "ginger-game.pro" },
-        { "title": "Gioia Perfetta", "file": "gioia-perfetta.pro" },
-        { "title": "Island", "file": "island.pro" },
-        { "title": "La Canzone del Tuono", "file": "la-canzone-del-tuono.pro" },
-        { "title": "Luogoper", "file": "luogoper.pro" },
-        { "title": "Pharmacist Wife", "file": "pharmacist-wife-mv2.pro" },
-        { "title": "Plato (Orchi Rework)", "file": "plato-orchi-rework.pro" },
-        { "title": "Pollo", "file": "pollo.pro" },
-        { "title": "Tanta Paura", "file": "tanta-paura.pro" }
+        {
+          "title": "3MILY",
+          "file": "3mily.pro"
+        },
+        {
+          "title": "Be My Friend",
+          "file": "be-my-friend.pro"
+        },
+        {
+          "title": "Burnout",
+          "file": "burnout.pro"
+        },
+        {
+          "title": "Cioccolato Fondente",
+          "file": "cioccolato-fondente.pro"
+        },
+        {
+          "title": "Ginger Game",
+          "file": "ginger-game.pro"
+        },
+        {
+          "title": "Gioia Perfetta",
+          "file": "gioia-perfetta.pro"
+        },
+        {
+          "title": "Island",
+          "file": "island.pro"
+        },
+        {
+          "title": "La Canzone del Tuono",
+          "file": "la-canzone-del-tuono.pro"
+        },
+        {
+          "title": "Luogoper",
+          "file": "luogoper.pro"
+        },
+        {
+          "title": "Pharmacist Wife",
+          "file": "pharmacist-wife-mv2.pro"
+        },
+        {
+          "title": "Plato (Orchi Rework)",
+          "file": "plato-orchi-rework.pro"
+        },
+        {
+          "title": "Pollo",
+          "file": "pollo.pro"
+        },
+        {
+          "title": "Tanta Paura",
+          "file": "tanta-paura.pro"
+        }
+      ]
+    },
+    {
+      "name": "Shaka Lei Kaumaka",
+      "dir": "shaka-lei-kaumaka",
+      "note": "The bard's own songbook. Todo Es Posible: chords ARTIST-BLESSED ✓ (canon C→Cmaj7→F→F). A Planet We Share As One: official lyrics ✓, chords machine-draft (canon-consistent D-mixolydian C–G–D–D loop). Butterflies and Love: official lyrics ✓ + canon progression G–Em–C–D, chord placements machine-aligned awaiting blessing.",
+      "status": "mixed — 1 blessed, 2 awaiting blessing",
+      "songs": [
+        {
+          "title": "A Planet We Share As One",
+          "file": "a-planet-we-share-as-one.pro",
+          "status": "machine-draft (canon-consistent)"
+        },
+        {
+          "title": "Butterflies and Love",
+          "file": "butterflies-and-love.pro",
+          "status": "canon progression ✓ — placements awaiting blessing"
+        },
+        {
+          "title": "Todo Es Posible",
+          "file": "todo-es-posible.pro",
+          "status": "artist-blessed ✓"
+        }
       ]
     }
   ]
