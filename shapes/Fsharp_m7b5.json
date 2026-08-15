@@ -1,0 +1,123 @@
+{
+ "name": "F#m7b5",
+ "root": "F#",
+ "quality": "m7b5",
+ "aliases": [
+  "Gbm7b5",
+  "F#\u00f87",
+  "F#m7\u266d5",
+  "F#half-dim"
+ ],
+ "intervals": [
+  "1",
+  "b3",
+  "b5",
+  "b7"
+ ],
+ "notes": [
+  "F#",
+  "A",
+  "C",
+  "E"
+ ],
+ "pitch_classes": [
+  6,
+  9,
+  0,
+  4
+ ],
+ "guitar": {
+  "frets": [
+   2,
+   -1,
+   2,
+   2,
+   1,
+   -1
+  ],
+  "fingers": [
+   2,
+   0,
+   3,
+   4,
+   1,
+   0
+  ],
+  "baseFret": 1,
+  "barres": [],
+  "curated": true,
+  "tuning": "EADGBE",
+  "midi": [
+   42,
+   52,
+   57,
+   60
+  ]
+ },
+ "ukulele": {
+  "frets": [
+   2,
+   4,
+   2,
+   3
+  ],
+  "fingers": [
+   1,
+   4,
+   2,
+   3
+  ],
+  "baseFret": 1,
+  "barres": [],
+  "curated": true,
+  "tuning": "GCEA",
+  "midi": [
+   69,
+   64,
+   66,
+   72
+  ]
+ },
+ "piano": {
+  "notes": [
+   "F#4",
+   "A4",
+   "C5",
+   "E5"
+  ],
+  "midi": [
+   66,
+   69,
+   72,
+   76
+  ]
+ },
+ "bass": {
+  "tuning": "EADG",
+  "root": {
+   "string": "E",
+   "fret": 2,
+   "midi": 30
+  },
+  "fifth": {
+   "string": "A",
+   "fret": 3,
+   "midi": 36
+  },
+  "fifth_below": null,
+  "octave": {
+   "string": "D",
+   "fret": 4,
+   "midi": 42
+  }
+ },
+ "status": "curated",
+ "source": {
+  "guitar": "BACH curated (standard 2x221x)",
+  "ukulele": "BACH curated (standard 2423)",
+  "piano": "computed, spelled",
+  "bass": "computed (fifth = b5 position)"
+ },
+ "license": "CC0",
+ "note": "Half-diminished; bass 'fifth' stop is the FLAT five (C). Added 2026-08-15 for tanta-paura's G-F#\u00f8-Fmaj7-E lament line."
+}

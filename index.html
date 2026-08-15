@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open Source Orchestrator — songbooks for every artist, blessed by the artist</title>
+<meta name="description" content="A free, open-source, in-browser tool for making chord charts and songbooks: paste lyrics, place chords, correct machine drafts, switch instruments, export ChordPro and print-ready pages. Part of the Open Source Orchestra.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site">
+  <h1>Open Source Orchestrator
+    <small>chord charts &amp; songbooks · made in the open · blessed by the artist</small>
+  </h1>
+  <p class="mission">A tool of the <a href="https://opensourceorchestra.org">Open Source Orchestra</a>.
+  Machines sketch the first draft; musicians speak the truth. Everything here is free, open source
+  (CC0), and runs entirely in your browser — no accounts, no uploads, no tracking.
+  Add your own songbook to the community catalog on
+  <a href="https://github.com/ShakaLei/open-source-orchestrator">GitHub</a>. 🤙</p>
+</header>
+
+<main>
+
+<!-- ======================================================= STEP 1 -->
+<section class="card" id="step1">
+  <h2><span class="stepno">①</span> Song in</h2>
+  <p class="sub">Bring a song here any way you like.</p>
+
+  <div class="tabs">
+    <button class="on" data-pane="pane-paste">✍️ paste lyrics / ChordPro</button>
+    <button data-pane="pane-catalog">📚 community catalog</button>
+    <button data-pane="pane-import">📥 import a file</button>
+    <button data-pane="pane-audio">🧪 detect from audio (experimental)</button>
+  </div>
+
+  <div class="tabpane" id="pane-paste">
+    <textarea id="in-text" placeholder="Paste plain lyrics (blank line = new block)…
+
+…or ChordPro with chords inline, like:
+
+{title: Butterflies and Love}
+{key: G}
+[G]butterflies and [Em]love
+[C]carry me [D]home"></textarea>
+    <p><button class="primary" id="btn-parse">load the song →</button></p>
+  </div>
+
+  <div class="tabpane" id="pane-catalog" style="display:none">
+    <div id="catalog-list"><p class="hint">loading catalog…</p></div>
+    <p class="hint">Every songbook in the catalog arrives by pull request — see
+      <a href="https://github.com/ShakaLei/open-source-orchestrator/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>
+      to add yours.</p>
+  </div>
+
+  <div class="tabpane" id="pane-import" style="display:none">
+    <p class="filein">ChordPro file (.pro / .cho / .chopro):
+      <input type="file" id="in-pro" accept=".pro,.cho,.chopro,.crd,.txt"></p>
+    <p class="filein">Machine-detection JSON (chords timeline + timed lyric words — see
+      <a href="https://github.com/ShakaLei/open-source-orchestrator/blob/main/docs/DATA-FORMAT.md">docs/DATA-FORMAT.md</a>):
+      <input type="file" id="in-json" accept=".json"></p>
+    <p class="filein">A saved Orchestrator session (.oso.json):
+      <input type="file" id="in-oso" accept=".json"></p>
+  </div>
+
+  <div class="tabpane" id="pane-audio" style="display:none">
+    <p class="hint">🧪 <strong>Experimental.</strong> A tiny in-browser ear (FFT → chroma → chord
+    templates) sketches a rough chord timeline from an audio file. Nothing is uploaded — your song
+    never leaves your machine. Expect mistakes; server-grade detection (CREMA) is on the roadmap.</p>
+    <p class="filein"><input type="file" id="in-audio" accept="audio/*"></p>
+    <div id="detect-out"></div>
+  </div>
+</section>
+
+<!-- ======================================================= STEP 2 -->
+<section class="card" id="step2">
+  <h2><span class="stepno">②</span> Review &amp; bless</h2>
+  <p class="sub">The heart of the tool: click any chord to correct it · click any word to add a
+  chord there · label blocks (Verse / Chorus) and mark repeats with the ×N button so the chart
+  reads the way the song is actually sung.</p>
+
+  <div class="toolbar no-print-controls">
+    <div class="group">
+      <label>transpose</label>
+      <button id="tr-down" title="down a semitone">♭ −1</button>
+      <button id="tr-up" title="up a semitone">♯ +1</button>
+    </div>
+    <div class="group instr">
+      <label>instrument</label>
+      <button data-inst="guitar" class="on">guitar</button>
+      <button data-inst="ukulele">ukulele</button>
+      <button data-inst="piano">piano</button>
+      <button data-inst="bass">bass</button>
+    </div>
+  </div>
+
+  <div class="meta-grid no-print-controls">
+    <input id="m-title" placeholder="title">
+    <input id="m-artist" placeholder="artist">
+    <input id="m-key" placeholder="key">
+    <input id="m-tempo" placeholder="bpm">
+  </div>
+  <input id="m-comment" class="no-print-controls" placeholder="provenance note (e.g. machine draft — awaiting blessing)">
+
+  <div class="pv-head">
+    <h3 id="pv-title">Untitled</h3>
+    <div class="pv-sub" id="pv-sub"></div>
+    <div class="pv-note" id="pv-note"></div>
+  </div>
+
+  <div id="chart"></div>
+  <div id="diagrams"></div>
+</section>
+
+<!-- ======================================================= STEP 3 -->
+<section class="card" id="step3">
+  <h2><span class="stepno">③</span> Publish</h2>
+  <p class="sub">Take the blessed chart with you — and share it back with the catalog if the artist
+  says yes.</p>
+  <div class="exports">
+    <button class="primary" id="ex-pro">⬇ ChordPro (.pro)</button>
+    <button id="ex-print">🖨 print / save as PDF</button>
+    <button id="ex-json">⬇ session JSON</button>
+    <button id="ex-copy">copy share JSON</button>
+  </div>
+  <p class="roadmap">Coming in v1: Swarm publishing (decentralized, permanent songbook pages),
+  server-grade chord detection (CREMA), and an in-tool “open a pull request” flow. Want to help?
+  <a href="https://github.com/ShakaLei/open-source-orchestrator">The repo is open.</a></p>
+</section>
+
+</main>
+
+<!-- chord popover -->
+<div id="chordpop">
+  <div class="at">chord at “<span id="pop-word"></span>”</div>
+  <input id="pop-input" list="chordlist" placeholder="e.g. Em, F#m7, Bb">
+  <datalist id="chordlist">
+    <option>C</option><option>Cm</option><option>C7</option><option>Cmaj7</option>
+    <option>D</option><option>Dm</option><option>D7</option><option>Dsus4</option>
+    <option>E</option><option>Em</option><option>E7</option><option>Em7</option>
+    <option>F</option><option>Fm</option><option>F#m</option><option>Fmaj7</option>
+    <option>G</option><option>Gm</option><option>G7</option><option>Gsus4</option>
+    <option>A</option><option>Am</option><option>A7</option><option>Am7</option>
+    <option>B</option><option>Bm</option><option>B7</option><option>Bb</option>
+  </datalist>
+  <div class="row">
+    <button class="primary" id="pop-apply">apply</button>
+    <button id="pop-remove">remove</button>
+    <button id="pop-cancel">cancel</button>
+  </div>
+</div>
+
+<footer class="site">
+  <p>Open Source Orchestrator v0 · CC0 — no rights reserved, all love shared ·
+  born from a letter by Matteo Tambussi, first artist of the catalog.</p>
+  <p>Chord shapes database built on <a href="https://github.com/chordbook/chords-db">chordbook/chords-db</a> (MIT)
+  with curated additions · part of the <a href="https://opensourceorchestra.org">Open Source Orchestra</a> —
+  a mission, not a product.</p>
+</footer>
+
+<script src="shapes/shapes.js"></script>
+<script src="assets/diagrams.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/detect.js"></script>
+</body>
+</html>

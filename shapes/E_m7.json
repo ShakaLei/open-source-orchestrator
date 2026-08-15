@@ -1,0 +1,120 @@
+{
+ "name": "Em7",
+ "root": "E",
+ "quality": "m7",
+ "aliases": [
+  "Emin7",
+  "E-7"
+ ],
+ "intervals": [
+  "1",
+  "b3",
+  "5",
+  "b7"
+ ],
+ "notes": [
+  "E",
+  "G",
+  "B",
+  "D"
+ ],
+ "pitch_classes": [
+  4,
+  7,
+  11,
+  2
+ ],
+ "guitar": {
+  "frets": [
+   0,
+   -1,
+   0,
+   0,
+   0,
+   -1
+  ],
+  "fingers": [
+   2,
+   0,
+   3,
+   3,
+   3,
+   0
+  ],
+  "baseFret": 1,
+  "barres": [],
+  "curated": false,
+  "tuning": "EADGBE",
+  "midi": [
+   40,
+   50,
+   55,
+   59
+  ]
+ },
+ "ukulele": {
+  "frets": [
+   0,
+   2,
+   0,
+   2
+  ],
+  "fingers": [
+   0,
+   1,
+   0,
+   2
+  ],
+  "baseFret": 1,
+  "barres": [],
+  "curated": false,
+  "tuning": "GCEA",
+  "midi": [
+   67,
+   62,
+   64,
+   71
+  ]
+ },
+ "piano": {
+  "notes": [
+   "E4",
+   "G4",
+   "B4",
+   "D5"
+  ],
+  "midi": [
+   64,
+   67,
+   71,
+   74
+  ]
+ },
+ "bass": {
+  "tuning": "EADG",
+  "root": {
+   "string": "E",
+   "fret": 0,
+   "midi": 28
+  },
+  "fifth": {
+   "string": "A",
+   "fret": 2,
+   "midi": 35
+  },
+  "fifth_below": null,
+  "octave": {
+   "string": "D",
+   "fret": 2,
+   "midi": 40
+  }
+ },
+ "status": "standard",
+ "source": {
+  "guitar": "chordbook/chords-db (MIT)",
+  "ukulele": "chordbook/chords-db (MIT)",
+  "piano": "computed, verified vs chordbook",
+  "bass": "computed"
+ },
+ "license": "CC0"
+}

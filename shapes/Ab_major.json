@@ -1,0 +1,121 @@
+{
+ "name": "Ab",
+ "root": "Ab",
+ "quality": "major",
+ "aliases": [
+  "G#",
+  "Abmaj",
+  "AbM",
+  "G#maj",
+  "G#M"
+ ],
+ "intervals": [
+  "1",
+  "3",
+  "5"
+ ],
+ "notes": [
+  "Ab",
+  "C",
+  "Eb"
+ ],
+ "pitch_classes": [
+  8,
+  0,
+  3
+ ],
+ "guitar": {
+  "frets": [
+   4,
+   3,
+   1,
+   1,
+   1,
+   -1
+  ],
+  "fingers": [
+   3,
+   2,
+   1,
+   1,
+   1,
+   0
+  ],
+  "baseFret": 1,
+  "barres": [
+   1
+  ],
+  "curated": false,
+  "tuning": "EADGBE",
+  "midi": [
+   44,
+   48,
+   51,
+   56,
+   60
+  ]
+ },
+ "ukulele": {
+  "frets": [
+   1,
+   3,
+   4,
+   3
+  ],
+  "fingers": [
+   1,
+   2,
+   4,
+   3
+  ],
+  "baseFret": 1,
+  "barres": [],
+  "curated": false,
+  "tuning": "GCEA",
+  "midi": [
+   68,
+   63,
+   68,
+   72
+  ]
+ },
+ "piano": {
+  "notes": [
+   "Ab4",
+   "C5",
+   "Eb5"
+  ],
+  "midi": [
+   68,
+   72,
+   75
+  ]
+ },
+ "bass": {
+  "tuning": "EADG",
+  "root": {
+   "string": "E",
+   "fret": 4,
+   "midi": 32
+  },
+  "fifth": {
+   "string": "A",
+   "fret": 6,
+   "midi": 39
+  },
+  "fifth_below": null,
+  "octave": {
+   "string": "D",
+   "fret": 6,
+   "midi": 44
+  }
+ },
+ "status": "standard",
+ "source": {
+  "guitar": "chordbook/chords-db (MIT)",
+  "ukulele": "chordbook/chords-db (MIT)",
+  "piano": "computed, verified vs chordbook",
+  "bass": "computed"
+ },
+ "license": "CC0"
+}

@@ -1,0 +1,116 @@
+{
+ "name": "Esus4",
+ "root": "E",
+ "quality": "sus4",
+ "aliases": [
+  "Esus"
+ ],
+ "intervals": [
+  "1",
+  "4",
+  "5"
+ ],
+ "notes": [
+  "E",
+  "A",
+  "B"
+ ],
+ "pitch_classes": [
+  4,
+  9,
+  11
+ ],
+ "guitar": {
+  "frets": [
+   0,
+   2,
+   2,
+   2,
+   0,
+   0
+  ],
+  "fingers": [
+   0,
+   2,
+   3,
+   4,
+   0,
+   0
+  ],
+  "baseFret": 1,
+  "barres": [],
+  "curated": false,
+  "tuning": "EADGBE",
+  "midi": [
+   40,
+   47,
+   52,
+   57,
+   59,
+   64
+  ]
+ },
+ "ukulele": {
+  "frets": [
+   4,
+   4,
+   0,
+   0
+  ],
+  "fingers": [
+   1,
+   2,
+   0,
+   0
+  ],
+  "baseFret": 1,
+  "barres": [],
+  "curated": true,
+  "tuning": "GCEA",
+  "midi": [
+   71,
+   64,
+   64,
+   69
+  ]
+ },
+ "piano": {
+  "notes": [
+   "E4",
+   "A4",
+   "B4"
+  ],
+  "midi": [
+   64,
+   69,
+   71
+  ]
+ },
+ "bass": {
+  "tuning": "EADG",
+  "root": {
+   "string": "E",
+   "fret": 0,
+   "midi": 28
+  },
+  "fifth": {
+   "string": "A",
+   "fret": 2,
+   "midi": 35
+  },
+  "fifth_below": null,
+  "octave": {
+   "string": "D",
+   "fret": 2,
+   "midi": 40
+  }
+ },
+ "status": "standard",
+ "source": {
+  "guitar": "chordbook/chords-db (MIT)",
+  "ukulele": "chordbook/chords-db (MIT)",
+  "piano": "computed, verified vs chordbook",
+  "bass": "computed"
+ },
+ "license": "CC0"
+}

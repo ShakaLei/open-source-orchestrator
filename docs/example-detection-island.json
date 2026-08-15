@@ -1,0 +1,1331 @@
+{
+ "slug": "island",
+ "title": "Island",
+ "key": "Bm",
+ "key_alternatives": [
+  [
+   "D",
+   258.4
+  ],
+  [
+   "Em",
+   240.4
+  ],
+  [
+   "G",
+   215.8
+  ]
+ ],
+ "key_krumhansl": "G",
+ "tempo": 89.1,
+ "duration": 268.1,
+ "detected_with": "CREMA chord CRNN (primary) + madmom (second witness) + BACH theory review \u2014 DRAFT, awaiting Matteo's blessing",
+ "lyrics_official": true,
+ "core_progression": [
+  "Bm",
+  "D",
+  "Em",
+  "A"
+ ],
+ "core_display": "Bm \u2013 D \u2013 Em \u2013 A (+ F#m) \u00b7 G\u2013C\u2013D bridge",
+ "chords_used": [
+  "Em",
+  "Bm",
+  "D",
+  "A",
+  "C",
+  "G",
+  "F#m"
+ ],
+ "chords_timeline": [
+  {
+   "start": 2.51,
+   "end": 4.18,
+   "chord": "Bm"
+  },
+  {
+   "start": 4.18,
+   "end": 8.17,
+   "chord": "D"
+  },
+  {
+   "start": 8.17,
+   "end": 10.68,
+   "chord": "Em"
+  },
+  {
+   "start": 10.68,
+   "end": 13.28,
+   "chord": "A"
+  },
+  {
+   "start": 13.28,
+   "end": 15.88,
+   "chord": "F#m"
+  },
+  {
+   "start": 15.88,
+   "end": 17.55,
+   "chord": "Bm"
+  },
+  {
+   "start": 17.55,
+   "end": 23.03,
+   "chord": "Em"
+  },
+  {
+   "start": 23.03,
+   "end": 24.33,
+   "chord": "Bm"
+  },
+  {
+   "start": 24.33,
+   "end": 28.33,
+   "chord": "D"
+  },
+  {
+   "start": 28.33,
+   "end": 30.65,
+   "chord": "Em"
+  },
+  {
+   "start": 30.65,
+   "end": 33.34,
+   "chord": "A"
+  },
+  {
+   "start": 33.34,
+   "end": 36.04,
+   "chord": "F#m"
+  },
+  {
+   "start": 36.04,
+   "end": 37.24,
+   "chord": "Bm"
+  },
+  {
+   "start": 37.24,
+   "end": 42.63,
+   "chord": "Em"
+  },
+  {
+   "start": 42.63,
+   "end": 43.93,
+   "chord": "Bm"
+  },
+  {
+   "start": 43.93,
+   "end": 45.23,
+   "chord": "A"
+  },
+  {
+   "start": 45.23,
+   "end": 47.93,
+   "chord": "D"
+  },
+  {
+   "start": 47.93,
+   "end": 50.62,
+   "chord": "Em"
+  },
+  {
+   "start": 50.62,
+   "end": 53.31,
+   "chord": "A"
+  },
+  {
+   "start": 53.31,
+   "end": 55.91,
+   "chord": "F#m"
+  },
+  {
+   "start": 55.91,
+   "end": 57.31,
+   "chord": "Bm"
+  },
+  {
+   "start": 57.31,
+   "end": 62.69,
+   "chord": "Em"
+  },
+  {
+   "start": 62.69,
+   "end": 63.9,
+   "chord": "Bm"
+  },
+  {
+   "start": 63.9,
+   "end": 65.29,
+   "chord": "A"
+  },
+  {
+   "start": 65.29,
+   "end": 67.99,
+   "chord": "D"
+  },
+  {
+   "start": 67.99,
+   "end": 70.68,
+   "chord": "Em"
+  },
+  {
+   "start": 70.68,
+   "end": 73.28,
+   "chord": "A"
+  },
+  {
+   "start": 73.28,
+   "end": 76.07,
+   "chord": "Em"
+  },
+  {
+   "start": 76.07,
+   "end": 78.58,
+   "chord": "A"
+  },
+  {
+   "start": 78.58,
+   "end": 81.27,
+   "chord": "F#m"
+  },
+  {
+   "start": 81.27,
+   "end": 82.57,
+   "chord": "Bm"
+  },
+  {
+   "start": 82.57,
+   "end": 87.96,
+   "chord": "Em"
+  },
+  {
+   "start": 87.96,
+   "end": 90.65,
+   "chord": "G"
+  },
+  {
+   "start": 90.65,
+   "end": 93.25,
+   "chord": "D"
+  },
+  {
+   "start": 93.25,
+   "end": 98.73,
+   "chord": "Em"
+  },
+  {
+   "start": 98.73,
+   "end": 101.33,
+   "chord": "G"
+  },
+  {
+   "start": 101.33,
+   "end": 103.93,
+   "chord": "D"
+  },
+  {
+   "start": 103.93,
+   "end": 106.63,
+   "chord": "A"
+  },
+  {
+   "start": 106.63,
+   "end": 111.92,
+   "chord": "C"
+  },
+  {
+   "start": 111.92,
+   "end": 113.31,
+   "chord": "G"
+  },
+  {
+   "start": 113.31,
+   "end": 114.61,
+   "chord": "C"
+  },
+  {
+   "start": 114.61,
+   "end": 119.81,
+   "chord": "Em"
+  },
+  {
+   "start": 119.81,
+   "end": 122.51,
+   "chord": "G"
+  },
+  {
+   "start": 122.51,
+   "end": 125.29,
+   "chord": "D"
+  },
+  {
+   "start": 125.29,
+   "end": 128.08,
+   "chord": "Em"
+  },
+  {
+   "start": 128.08,
+   "end": 130.59,
+   "chord": "A"
+  },
+  {
+   "start": 130.59,
+   "end": 133.28,
+   "chord": "Em"
+  },
+  {
+   "start": 133.28,
+   "end": 135.88,
+   "chord": "A"
+  },
+  {
+   "start": 135.88,
+   "end": 138.58,
+   "chord": "F#m"
+  },
+  {
+   "start": 138.58,
+   "end": 139.97,
+   "chord": "Bm"
+  },
+  {
+   "start": 139.97,
+   "end": 145.45,
+   "chord": "Em"
+  },
+  {
+   "start": 145.45,
+   "end": 146.66,
+   "chord": "Bm"
+  },
+  {
+   "start": 146.66,
+   "end": 147.86,
+   "chord": "A"
+  },
+  {
+   "start": 147.86,
+   "end": 150.65,
+   "chord": "D"
+  },
+  {
+   "start": 150.65,
+   "end": 153.44,
+   "chord": "Em"
+  },
+  {
+   "start": 153.44,
+   "end": 155.95,
+   "chord": "A"
+  },
+  {
+   "start": 155.95,
+   "end": 158.64,
+   "chord": "F#m"
+  },
+  {
+   "start": 158.64,
+   "end": 159.94,
+   "chord": "Bm"
+  },
+  {
+   "start": 159.94,
+   "end": 165.33,
+   "chord": "Em"
+  },
+  {
+   "start": 165.33,
+   "end": 167.93,
+   "chord": "G"
+  },
+  {
+   "start": 167.93,
+   "end": 170.62,
+   "chord": "D"
+  },
+  {
+   "start": 170.62,
+   "end": 176.19,
+   "chord": "Em"
+  },
+  {
+   "start": 176.19,
+   "end": 178.61,
+   "chord": "G"
+  },
+  {
+   "start": 178.61,
+   "end": 181.3,
+   "chord": "D"
+  },
+  {
+   "start": 181.3,
+   "end": 187.99,
+   "chord": "Em"
+  },
+  {
+   "start": 187.99,
+   "end": 189.29,
+   "chord": "G"
+  },
+  {
+   "start": 189.29,
+   "end": 192.91,
+   "chord": "D"
+  },
+  {
+   "start": 192.91,
+   "end": 194.68,
+   "chord": "A"
+  },
+  {
+   "start": 194.68,
+   "end": 197.28,
+   "chord": "C"
+  },
+  {
+   "start": 197.28,
+   "end": 198.58,
+   "chord": "Bm"
+  },
+  {
+   "start": 198.58,
+   "end": 199.97,
+   "chord": "C"
+  },
+  {
+   "start": 199.97,
+   "end": 201.18,
+   "chord": "Bm"
+  },
+  {
+   "start": 201.18,
+   "end": 202.57,
+   "chord": "C"
+  },
+  {
+   "start": 202.57,
+   "end": 203.96,
+   "chord": "Bm"
+  },
+  {
+   "start": 203.96,
+   "end": 205.26,
+   "chord": "C"
+  },
+  {
+   "start": 205.26,
+   "end": 206.56,
+   "chord": "Bm"
+  },
+  {
+   "start": 206.56,
+   "end": 207.96,
+   "chord": "C"
+  },
+  {
+   "start": 207.96,
+   "end": 209.26,
+   "chord": "Bm"
+  },
+  {
+   "start": 209.26,
+   "end": 210.65,
+   "chord": "C"
+  },
+  {
+   "start": 210.65,
+   "end": 211.95,
+   "chord": "Bm"
+  },
+  {
+   "start": 211.95,
+   "end": 213.34,
+   "chord": "C"
+  },
+  {
+   "start": 213.34,
+   "end": 214.55,
+   "chord": "G"
+  },
+  {
+   "start": 214.55,
+   "end": 215.95,
+   "chord": "C"
+  },
+  {
+   "start": 215.95,
+   "end": 217.25,
+   "chord": "G"
+  },
+  {
+   "start": 217.25,
+   "end": 218.64,
+   "chord": "C"
+  },
+  {
+   "start": 218.64,
+   "end": 221.33,
+   "chord": "Bm"
+  },
+  {
+   "start": 221.33,
+   "end": 223.93,
+   "chord": "D"
+  },
+  {
+   "start": 223.93,
+   "end": 226.72,
+   "chord": "Em"
+  },
+  {
+   "start": 226.72,
+   "end": 229.32,
+   "chord": "A"
+  },
+  {
+   "start": 229.32,
+   "end": 230.62,
+   "chord": "Bm"
+  },
+  {
+   "start": 230.62,
+   "end": 231.92,
+   "chord": "F#m"
+  },
+  {
+   "start": 231.92,
+   "end": 234.61,
+   "chord": "D"
+  },
+  {
+   "start": 234.61,
+   "end": 237.4,
+   "chord": "Em"
+  },
+  {
+   "start": 237.4,
+   "end": 239.35,
+   "chord": "A"
+  },
+  {
+   "start": 239.35,
+   "end": 242.6,
+   "chord": "Bm"
+  },
+  {
+   "start": 242.6,
+   "end": 245.2,
+   "chord": "D"
+  },
+  {
+   "start": 245.2,
+   "end": 247.99,
+   "chord": "Em"
+  },
+  {
+   "start": 247.99,
+   "end": 249.94,
+   "chord": "A"
+  },
+  {
+   "start": 249.94,
+   "end": 255.88,
+   "chord": "Bm"
+  },
+  {
+   "start": 255.88,
+   "end": 259.23,
+   "chord": "Em"
+  },
+  {
+   "start": 259.23,
+   "end": 261.18,
+   "chord": "A"
+  },
+  {
+   "start": 261.18,
+   "end": 266.75,
+   "chord": "Bm"
+  }
+ ],
+ "lines": [
+  {
+   "text": "oh life",
+   "start": 22.62,
+   "end": 25.12,
+   "words": [
+    {
+     "w": " oh",
+     "t": 22.62
+    },
+    {
+     "w": " life",
+     "t": 22.92
+    }
+   ]
+  },
+  {
+   "text": "you got me rowing",
+   "start": 26.98,
+   "end": 29.36,
+   "words": [
+    {
+     "w": " you",
+     "t": 26.98
+    },
+    {
+     "w": " got",
+     "t": 27.64
+    },
+    {
+     "w": " me",
+     "t": 27.84
+    },
+    {
+     "w": " rowing",
+     "t": 28.12
+    }
+   ]
+  },
+  {
+   "text": "under the sun",
+   "start": 29.9,
+   "end": 31.48,
+   "words": [
+    {
+     "w": " under",
+     "t": 29.9
+    },
+    {
+     "w": " the",
+     "t": 30.22
+    },
+    {
+     "w": " sun",
+     "t": 30.66
+    }
+   ]
+  },
+  {
+   "text": "no way I can find my island",
+   "start": 32.9,
+   "end": 38.34,
+   "words": [
+    {
+     "w": " no",
+     "t": 32.9
+    },
+    {
+     "w": " way",
+     "t": 33.6
+    },
+    {
+     "w": " I",
+     "t": 35.3
+    },
+    {
+     "w": " can",
+     "t": 35.6
+    },
+    {
+     "w": " find",
+     "t": 35.8
+    },
+    {
+     "w": " my",
+     "t": 36.2
+    },
+    {
+     "w": " island",
+     "t": 37.04
+    }
+   ]
+  },
+  {
+   "text": "fine line",
+   "start": 43.74,
+   "end": 46.04,
+   "words": [
+    {
+     "w": " fine",
+     "t": 43.74
+    },
+    {
+     "w": " line",
+     "t": 43.74
+    }
+   ]
+  },
+  {
+   "text": "between the blue",
+   "start": 46.62,
+   "end": 48.68,
+   "words": [
+    {
+     "w": " between",
+     "t": 46.62
+    },
+    {
+     "w": " the",
+     "t": 47.78
+    },
+    {
+     "w": " blue",
+     "t": 48.06
+    }
+   ]
+  },
+  {
+   "text": "ocean and soul",
+   "start": 49.84,
+   "end": 51.52,
+   "words": [
+    {
+     "w": " ocean",
+     "t": 49.84
+    },
+    {
+     "w": " and",
+     "t": 50.24
+    },
+    {
+     "w": " soul",
+     "t": 50.74
+    }
+   ]
+  },
+  {
+   "text": "tears won\u2019t let me see my island",
+   "start": 53.06,
+   "end": 62.96,
+   "words": [
+    {
+     "w": " tears",
+     "t": 53.06
+    },
+    {
+     "w": " won\u2019t",
+     "t": 53.88
+    },
+    {
+     "w": " let",
+     "t": 55.12
+    },
+    {
+     "w": " me",
+     "t": 55.34
+    },
+    {
+     "w": " see",
+     "t": 55.74
+    },
+    {
+     "w": " my",
+     "t": 61.64
+    },
+    {
+     "w": " island",
+     "t": 62.96
+    }
+   ]
+  },
+  {
+   "text": "low lives",
+   "start": 65.4,
+   "end": 65.4,
+   "words": [
+    {
+     "w": " low",
+     "t": 65.4
+    },
+    {
+     "w": " lives",
+     "t": 65.4
+    }
+   ]
+  },
+  {
+   "text": "my family",
+   "start": 65.4,
+   "end": 68.34,
+   "words": [
+    {
+     "w": " my",
+     "t": 65.4
+    },
+    {
+     "w": " family",
+     "t": 65.4
+    }
+   ]
+  },
+  {
+   "text": "the only ones I know",
+   "start": 69.26,
+   "end": 71.0,
+   "words": [
+    {
+     "w": " the",
+     "t": 69.26
+    },
+    {
+     "w": " only",
+     "t": 69.38
+    },
+    {
+     "w": " ones",
+     "t": 69.72
+    },
+    {
+     "w": " I",
+     "t": 70.12
+    },
+    {
+     "w": " know",
+     "t": 70.38
+    }
+   ]
+  },
+  {
+   "text": "go, go with the flow",
+   "start": 72.02,
+   "end": 76.7,
+   "words": [
+    {
+     "w": " go,",
+     "t": 72.02
+    },
+    {
+     "w": " go",
+     "t": 74.78
+    },
+    {
+     "w": " with",
+     "t": 75.38
+    },
+    {
+     "w": " the",
+     "t": 75.74
+    },
+    {
+     "w": " flow",
+     "t": 75.84
+    }
+   ]
+  },
+  {
+   "text": "miles and miles away from the skyline",
+   "start": 77.94,
+   "end": 84.62,
+   "words": [
+    {
+     "w": " miles",
+     "t": 77.94
+    },
+    {
+     "w": " and",
+     "t": 79.38
+    },
+    {
+     "w": " miles",
+     "t": 79.96
+    },
+    {
+     "w": " away",
+     "t": 80.58
+    },
+    {
+     "w": " from",
+     "t": 81.44
+    },
+    {
+     "w": " the",
+     "t": 82.18
+    },
+    {
+     "w": " skyline",
+     "t": 82.46
+    }
+   ]
+  },
+  {
+   "text": "you rock and rollers",
+   "start": 85.08,
+   "end": 91.52,
+   "words": [
+    {
+     "w": " you",
+     "t": 85.08
+    },
+    {
+     "w": " rock",
+     "t": 88.0
+    },
+    {
+     "w": " and",
+     "t": 89.94
+    },
+    {
+     "w": " rollers",
+     "t": 90.44
+    }
+   ]
+  },
+  {
+   "text": "take the oars",
+   "start": 92.6,
+   "end": 94.42,
+   "words": [
+    {
+     "w": " take",
+     "t": 92.6
+    },
+    {
+     "w": " the",
+     "t": 92.84
+    },
+    {
+     "w": " oars",
+     "t": 93.24
+    }
+   ]
+  },
+  {
+   "text": "you castaway lovers",
+   "start": 97.62,
+   "end": 102.52,
+   "words": [
+    {
+     "w": " you",
+     "t": 97.62
+    },
+    {
+     "w": " castaway",
+     "t": 98.8
+    },
+    {
+     "w": " lovers",
+     "t": 101.38
+    }
+   ]
+  },
+  {
+   "text": "feel the roar of Life",
+   "start": 103.28,
+   "end": 107.68,
+   "words": [
+    {
+     "w": " feel",
+     "t": 103.28
+    },
+    {
+     "w": " the",
+     "t": 103.52
+    },
+    {
+     "w": " roar",
+     "t": 104.06
+    },
+    {
+     "w": " of",
+     "t": 105.12
+    },
+    {
+     "w": " Life",
+     "t": 105.84
+    }
+   ]
+  },
+  {
+   "text": "life on an island",
+   "start": 110.24,
+   "end": 112.04,
+   "words": [
+    {
+     "w": " life",
+     "t": 110.24
+    },
+    {
+     "w": " on",
+     "t": 110.94
+    },
+    {
+     "w": " an",
+     "t": 111.32
+    },
+    {
+     "w": " island",
+     "t": 111.86
+    }
+   ]
+  },
+  {
+   "text": "searching for islands",
+   "start": 112.04,
+   "end": 112.04,
+   "words": [
+    {
+     "w": " searching",
+     "t": 112.04
+    },
+    {
+     "w": " for",
+     "t": 112.04
+    },
+    {
+     "w": " islands",
+     "t": 112.04
+    }
+   ]
+  },
+  {
+   "text": "sailing by the stars",
+   "start": 112.04,
+   "end": 112.04,
+   "words": [
+    {
+     "w": " sailing",
+     "t": 112.04
+    },
+    {
+     "w": " by",
+     "t": 112.04
+    },
+    {
+     "w": " the",
+     "t": 112.04
+    },
+    {
+     "w": " stars",
+     "t": 112.04
+    }
+   ]
+  },
+  {
+   "text": "never be lost",
+   "start": 112.04,
+   "end": 112.04,
+   "words": [
+    {
+     "w": " never",
+     "t": 112.04
+    },
+    {
+     "w": " be",
+     "t": 112.04
+    },
+    {
+     "w": " lost",
+     "t": 112.04
+    }
+   ]
+  },
+  {
+   "text": "all mine",
+   "start": 112.04,
+   "end": 112.04,
+   "words": [
+    {
+     "w": " all",
+     "t": 112.04
+    },
+    {
+     "w": " mine",
+     "t": 112.04
+    }
+   ]
+  },
+  {
+   "text": "nothing to lose, under this sun",
+   "start": 112.04,
+   "end": 113.78,
+   "words": [
+    {
+     "w": " nothing",
+     "t": 112.04
+    },
+    {
+     "w": " to",
+     "t": 112.04
+    },
+    {
+     "w": " lose,",
+     "t": 112.04
+    },
+    {
+     "w": " under",
+     "t": 112.82
+    },
+    {
+     "w": " this",
+     "t": 113.6
+    },
+    {
+     "w": " sun",
+     "t": 113.78
+    }
+   ]
+  },
+  {
+   "text": "just nowhere to run",
+   "start": 113.78,
+   "end": 113.9,
+   "words": [
+    {
+     "w": " just",
+     "t": 113.78
+    },
+    {
+     "w": " nowhere",
+     "t": 113.78
+    },
+    {
+     "w": " to",
+     "t": 113.9
+    },
+    {
+     "w": " run",
+     "t": 113.9
+    }
+   ]
+  },
+  {
+   "text": "we\u2019ll never stop chasing our Islands",
+   "start": 113.9,
+   "end": 113.9,
+   "words": [
+    {
+     "w": " we\u2019ll",
+     "t": 113.9
+    },
+    {
+     "w": " never",
+     "t": 113.9
+    },
+    {
+     "w": " stop",
+     "t": 113.9
+    },
+    {
+     "w": " chasing",
+     "t": 113.9
+    },
+    {
+     "w": " our",
+     "t": 113.9
+    },
+    {
+     "w": " Islands",
+     "t": 113.9
+    }
+   ]
+  },
+  {
+   "text": "you rock and rollers",
+   "start": 113.9,
+   "end": 113.9,
+   "words": [
+    {
+     "w": " you",
+     "t": 113.9
+    },
+    {
+     "w": " rock",
+     "t": 113.9
+    },
+    {
+     "w": " and",
+     "t": 113.9
+    },
+    {
+     "w": " rollers",
+     "t": 113.9
+    }
+   ]
+  },
+  {
+   "text": "take the oars",
+   "start": 113.9,
+   "end": 113.9,
+   "words": [
+    {
+     "w": " take",
+     "t": 113.9
+    },
+    {
+     "w": " the",
+     "t": 113.9
+    },
+    {
+     "w": " oars",
+     "t": 113.9
+    }
+   ]
+  },
+  {
+   "text": "you exiled looters feel the roar",
+   "start": 113.9,
+   "end": 113.9,
+   "words": [
+    {
+     "w": " you",
+     "t": 113.9
+    },
+    {
+     "w": " exiled",
+     "t": 113.9
+    },
+    {
+     "w": " looters",
+     "t": 113.9
+    },
+    {
+     "w": " feel",
+     "t": 113.9
+    },
+    {
+     "w": " the",
+     "t": 113.9
+    },
+    {
+     "w": " roar",
+     "t": 113.9
+    }
+   ]
+  },
+  {
+   "text": "of Life",
+   "start": 113.9,
+   "end": 113.9,
+   "words": [
+    {
+     "w": " of",
+     "t": 113.9
+    },
+    {
+     "w": " Life",
+     "t": 113.9
+    }
+   ]
+  },
+  {
+   "text": "life on an Island",
+   "start": 113.9,
+   "end": 113.9,
+   "words": [
+    {
+     "w": " life",
+     "t": 113.9
+    },
+    {
+     "w": " on",
+     "t": 113.9
+    },
+    {
+     "w": " an",
+     "t": 113.9
+    },
+    {
+     "w": " Island",
+     "t": 113.9
+    }
+   ]
+  },
+  {
+   "text": "searchin for islands",
+   "start": 113.9,
+   "end": 115.32,
+   "words": [
+    {
+     "w": " searchin",
+     "t": 113.9
+    },
+    {
+     "w": " for",
+     "t": 114.44
+    },
+    {
+     "w": " islands",
+     "t": 114.5
+    }
+   ]
+  },
+  {
+   "text": "sailing by the stars",
+   "start": 115.98,
+   "end": 118.12,
+   "words": [
+    {
+     "w": " sailing",
+     "t": 115.98
+    },
+    {
+     "w": " by",
+     "t": 116.54
+    },
+    {
+     "w": " the",
+     "t": 117.18
+    },
+    {
+     "w": " stars",
+     "t": 117.54
+    }
+   ]
+  },
+  {
+   "text": "never be lost",
+   "start": 118.46,
+   "end": 120.36,
+   "words": [
+    {
+     "w": " never",
+     "t": 118.46
+    },
+    {
+     "w": " be",
+     "t": 119.16
+    },
+    {
+     "w": " lost",
+     "t": 119.78
+    }
+   ]
+  },
+  {
+   "text": "never grow old",
+   "start": 120.68,
+   "end": 140.46,
+   "words": [
+    {
+     "w": " never",
+     "t": 120.68
+    },
+    {
+     "w": " grow",
+     "t": 137.06
+    },
+    {
+     "w": " old",
+     "t": 137.86
+    }
+   ]
+  }
+ ],
+ "alignment": {
+  "engine": "stable-ts forced alignment (whisper base)",
+  "lang": "en",
+  "nonmono": 0
+ },
+ "confidence": {
+  "verdict": "okay",
+  "agreement_between_ears_pct": 79.3,
+  "key_diatonic_pct": 92.3
+ },
+ "bach_notes": [
+  "KEY CALL (flagged): the main loop Bm\u2013D\u2013Em\u2013A\u2013F#m is 100% B-aeolian, and the song's very last chord is Bm7 \u2014 that settles it for me: Bm, not v1's G (F#m and A are non-diatonic to G; Krumhansl leans G only because of the shared signature).",
+  "The C in the bridge/outro is borrowed (bII lean toward the G side) \u2014 real, both ears heard it.",
+  "[BACH: the fingerpicked outro is rich in 7ths (Bm7 \u2013 Em7 \u2013 A7, Dmaj7) \u2014 collapsed to triads to keep the page calm; add the 7ths to taste.]"
+ ]
+}

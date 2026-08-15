@@ -1,0 +1,162 @@
+/* Open Source Orchestrator — style.css · CC0 · print-friendly songbook heart */
+:root {
+  --ink: #1b1b1b;
+  --paper: #fbf9f4;
+  --card: #ffffff;
+  --accent: #7a3e12;
+  --accent2: #0e5c46;
+  --faint: #8a8a8a;
+  --chip: #efe7d8;
+  --chipink: #5a3410;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.45;
+}
+header.site {
+  padding: 26px 20px 18px; text-align: center;
+  border-bottom: 3px double #d8cfbc;
+}
+header.site h1 { margin: 0; font-size: 30px; letter-spacing: 0.5px; }
+header.site h1 small { display: block; font-size: 13px; color: var(--faint); font-weight: normal; margin-top: 6px; }
+header.site .mission { max-width: 620px; margin: 10px auto 0; color: #555; font-size: 14px; font-style: italic; }
+header.site a { color: var(--accent); }
+
+main { max-width: 980px; margin: 0 auto; padding: 18px 16px 80px; }
+
+.card {
+  background: var(--card); border: 1px solid #e4dcc9; border-radius: 10px;
+  padding: 18px 20px; margin: 18px 0; box-shadow: 0 1px 3px rgba(60,40,10,0.06);
+}
+.card > h2 { margin: 0 0 4px; font-size: 20px; }
+.card > h2 .stepno { color: var(--accent); }
+.card .sub { margin: 0 0 12px; color: var(--faint); font-size: 13px; }
+
+.hint { color: var(--faint); font-size: 13px; }
+code { background: #f1ece0; padding: 1px 5px; border-radius: 4px; font-size: 12px; }
+
+button {
+  font-family: inherit; font-size: 14px; cursor: pointer;
+  background: #fff; color: var(--ink);
+  border: 1.5px solid #c9bfa8; border-radius: 8px; padding: 7px 14px;
+}
+button:hover { border-color: var(--accent); color: var(--accent); }
+button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+button.primary:hover { background: #93531f; color: #fff; }
+
+/* ---------- step 1 tabs ---------- */
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.tabs button { border-radius: 999px; font-size: 13px; }
+.tabs button.on { background: var(--accent2); color: #fff; border-color: var(--accent2); }
+.tabpane textarea {
+  width: 100%; min-height: 180px; font-family: "Courier New", monospace; font-size: 13px;
+  border: 1px solid #d5cbb4; border-radius: 8px; padding: 10px; background: #fffdf8;
+}
+.filein { margin: 8px 0; font-size: 14px; }
+.cat-artist h4 { margin: 10px 0 6px; }
+.cat-songs { display: flex; flex-wrap: wrap; gap: 8px; }
+.cat-song { font-size: 13px; }
+
+/* ---------- step 2: chart editor ---------- */
+.toolbar {
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+  padding: 8px 0 14px; border-bottom: 1px dashed #ddd3bd; margin-bottom: 14px;
+}
+.toolbar .group { display: flex; gap: 6px; align-items: center; }
+.toolbar label { font-size: 12px; color: var(--faint); text-transform: uppercase; letter-spacing: 0.06em; }
+.instr button.on { background: var(--accent2); color: #fff; border-color: var(--accent2); }
+
+.meta-grid { display: grid; grid-template-columns: 2fr 2fr 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+.meta-grid input, #m-comment {
+  font-family: inherit; font-size: 14px; padding: 6px 9px;
+  border: 1px solid #d5cbb4; border-radius: 7px; background: #fffdf8; width: 100%;
+}
+#m-comment { margin-bottom: 6px; font-size: 12.5px; color: #7a6a4a; }
+
+.pv-head { text-align: center; margin: 6px 0 14px; }
+.pv-head h3 { margin: 0; font-size: 24px; }
+.pv-head .pv-sub { color: var(--faint); font-size: 13px; }
+.pv-head .pv-note { color: #a3701c; font-size: 12px; font-style: italic; margin-top: 3px; }
+
+.sec { margin: 0 0 20px; }
+.sec-head { display: flex; gap: 6px; align-items: center; margin-bottom: 4px; }
+.sec-label {
+  font-family: inherit; font-size: 13px; font-weight: bold; letter-spacing: 0.04em;
+  border: 1px dashed #cfc4aa; border-radius: 6px; padding: 3px 8px; background: transparent;
+  color: var(--accent2); width: 200px;
+}
+.sec-rep, .sec-del { font-size: 12px; padding: 3px 8px; }
+.sec-head-print { display: none; font-weight: bold; color: var(--accent2); font-size: 13px; margin-bottom: 2px; }
+
+.line { margin: 2px 0 10px; position: relative; }
+.ln-split {
+  display: none; position: absolute; left: -34px; bottom: 2px;
+  font-size: 11px; padding: 1px 6px; border-color: #ddd3bd; color: var(--faint);
+}
+.line:hover .ln-split { display: inline-block; }
+.tok { display: inline-block; vertical-align: bottom; }
+.tok .sp { display: inline-block; width: 0.45em; }
+.chip {
+  display: block; min-height: 17px; font-family: Helvetica, Arial, sans-serif;
+  font-size: 12.5px; font-weight: bold; color: var(--chipink);
+  cursor: pointer; line-height: 17px; padding: 0 2px; border-radius: 4px;
+}
+.chip.has { background: var(--chip); }
+.chip.has:hover { outline: 2px solid var(--accent); }
+.chip.empty { color: transparent; }
+.tok:hover .chip.empty { color: #c9b995; background: #f6f0e2; }
+.word { font-size: 16px; cursor: pointer; }
+.word:hover { text-decoration: underline dotted #b89; }
+
+/* chord popover */
+#chordpop {
+  display: none; position: absolute; z-index: 50;
+  background: #fff; border: 1.5px solid var(--accent); border-radius: 10px;
+  padding: 10px 12px; box-shadow: 0 6px 18px rgba(50,30,0,0.18); width: 230px;
+}
+#chordpop .at { font-size: 11px; color: var(--faint); margin-bottom: 6px; }
+#pop-input {
+  width: 100%; font-family: Helvetica, Arial, sans-serif; font-weight: bold; font-size: 16px;
+  padding: 5px 8px; border: 1px solid #cbbfa2; border-radius: 6px; margin-bottom: 8px;
+}
+#chordpop .row { display: flex; gap: 6px; }
+#chordpop button { font-size: 12px; padding: 4px 9px; }
+
+/* diagrams strip */
+.diag-title { margin: 18px 0 6px; font-size: 13px; letter-spacing: 0.1em; color: var(--faint); }
+.diag-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; }
+.diag { margin: 0; text-align: center; }
+.diag figcaption { font-family: Helvetica, Arial, sans-serif; font-weight: bold; font-size: 13px; margin-bottom: 2px; }
+.noshape { width: 120px; height: 90px; border: 1px dashed #ccc; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center; color: var(--faint); font-size: 11px; }
+
+/* ---------- step 3 ---------- */
+.exports { display: flex; flex-wrap: wrap; gap: 10px; }
+.roadmap { margin-top: 10px; font-size: 12.5px; color: var(--faint); }
+
+footer.site {
+  text-align: center; color: var(--faint); font-size: 12.5px; padding: 24px 16px 40px;
+  border-top: 3px double #d8cfbc;
+}
+footer.site a { color: var(--accent); }
+
+/* ---------- print: the songbook page ---------- */
+@media print {
+  body { background: #fff; }
+  header.site, footer.site, #step1, #step3, .toolbar, .meta-grid, #m-comment,
+  .no-print-controls, #chordpop, .card > h2, .card .sub { display: none !important; }
+  main { max-width: none; padding: 0; }
+  .card { border: none; box-shadow: none; padding: 0; margin: 0; }
+  .sec-head-print { display: block; }
+  .sec { break-inside: avoid; }
+  .chip.has { background: none; padding: 0; }
+  .chip.empty { display: none; }
+  .diag-row { gap: 10px; }
+  .pv-note { color: #777 !important; }
+}
+
+@media (max-width: 640px) {
+  .meta-grid { grid-template-columns: 1fr 1fr; }
+}

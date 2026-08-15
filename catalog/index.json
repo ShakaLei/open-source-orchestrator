@@ -1,0 +1,28 @@
+{
+  "catalog": "Open Source Orchestrator — community songbook catalog",
+  "license": "CC0 — every songbook here is shared freely, with the artist's blessing",
+  "how_to_add": "see CONTRIBUTING.md — add a folder under catalog/ with your ChordPro files and list it here",
+  "artists": [
+    {
+      "name": "Matteo Tambussi",
+      "dir": "matteo-tambussi",
+      "note": "The first songbook of the catalog — machine-detected drafts (CREMA + theory review), lyrics official, chords awaiting Matteo's blessing.",
+      "status": "machine-draft-awaiting-blessing",
+      "songs": [
+        { "title": "3MILY", "file": "3mily.pro" },
+        { "title": "Be My Friend", "file": "be-my-friend.pro" },
+        { "title": "Burnout", "file": "burnout.pro" },
+        { "title": "Cioccolato Fondente", "file": "cioccolato-fondente.pro" },
+        { "title": "Ginger Game", "file": "ginger-game.pro" },
+        { "title": "Gioia Perfetta", "file": "gioia-perfetta.pro" },
+        { "title": "Island", "file": "island.pro" },
+        { "title": "La Canzone del Tuono", "file": "la-canzone-del-tuono.pro" },
+        { "title": "Luogoper", "file": "luogoper.pro" },
+        { "title": "Pharmacist Wife", "file": "pharmacist-wife-mv2.pro" },
+        { "title": "Plato (Orchi Rework)", "file": "plato-orchi-rework.pro" },
+        { "title": "Pollo", "file": "pollo.pro" },
+        { "title": "Tanta Paura", "file": "tanta-paura.pro" }
+      ]
+    }
+  ]
+}
