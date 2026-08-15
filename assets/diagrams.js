@@ -6,8 +6,29 @@
   "use strict";
   const INK = "#1b1b1b", FAINT = "#8a8a8a", PRESS = "#d9d9d9";
 
+  // ------------------------------------------------- pluggable instruments
+  // Adding an instrument = ① put its per-chord data under this field name in
+  // shapes/*.json (see shapes/README.md) ② rebuild shapes.js ③ add one entry
+  // here. Types: "fretted" (any string count — guitar/uke/mandolin/banjo…),
+  // "keyboard" (piano-style), "positions" (bass-style R/5/8 stops).
+  // Entries are shown only when at least one chord in the DB carries the field,
+  // so shipping shapes first and config later (or vice versa) is always safe.
+  const INSTRUMENTS = [
+    { id: "guitar", label: "guitar", type: "fretted" },
+    { id: "ukulele", label: "ukulele", type: "fretted" },
+    { id: "piano", label: "piano", type: "keyboard" },
+    { id: "bass", label: "bass", type: "positions" },
+    { id: "mandolin", label: "mandolin", type: "fretted" },   // shapes in progress
+    { id: "banjo", label: "banjo", type: "fretted" },         // shapes in progress
+  ];
+
   // ------------------------------------------------- lookup
   const DB = window.OSO_SHAPES || { index: {}, chords: {} };
+
+  function available() {
+    const entries = Object.values(DB.chords);
+    return INSTRUMENTS.filter((ins) => entries.some((e) => e[ins.id]));
+  }
 
   function lookup(sym) {
     if (!sym) return null;
@@ -86,13 +107,14 @@
     return out.join("");
   }
 
-  function guitarSvg(e) { const g = e.guitar; return gridSvg(g.frets, g.fingers, g.barres, g.tuning.split(""), null); }
-  function ukuleleSvg(e) { const u = e.ukulele; return gridSvg(u.frets, u.fingers, u.barres, u.tuning.split(""), null); }
+  function frettedSvg(d) {
+    const tuning = Array.isArray(d.tuning) ? d.tuning : d.tuning.split("");
+    return gridSvg(d.frets, d.fingers, d.barres, tuning, null);
+  }
 
-  function bassSvg(e) {
-    const b = e.bass;
-    const order = b.tuning.split("");
-    const frets = [-1, -1, -1, -1], labels = [null, null, null, null];
+  function positionsSvg(b) {
+    const order = Array.isArray(b.tuning) ? b.tuning : b.tuning.split("");
+    const frets = order.map(() => -1), labels = order.map(() => null);
     function put(stop, lab) {
       if (!stop) return;
       const s = order.indexOf(stop.string);
@@ -106,10 +128,10 @@
   const WHITE_PCS = [0, 2, 4, 5, 7, 9, 11];
   const BLACK_AFTER = { 0: 1, 2: 3, 5: 6, 7: 8, 9: 10 };
 
-  function pianoSvg(e) {
-    const pressed = new Set(e.piano.midi);
+  function keyboardSvg(d) {
+    const pressed = new Set(d.midi);
     const noteOf = {};
-    e.piano.notes.forEach((n, i) => { noteOf[e.piano.midi[i]] = n; });
+    d.notes.forEach((n, i) => { noteOf[d.midi[i]] = n; });
     const lowMidi = 60, nWhite = 15, ww = 16, wh = 64, bw = 10, bh = 40, top = 6;
     const w = ww * nWhite + 2, h = top + wh + 18;
     const out = [`<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" font-family="Helvetica,Arial,sans-serif">`];
@@ -139,13 +161,15 @@
     return out.join("");
   }
 
-  const RENDERERS = { guitar: guitarSvg, ukulele: ukuleleSvg, piano: pianoSvg, bass: bassSvg };
+  const TYPE_RENDERERS = { fretted: frettedSvg, keyboard: keyboardSvg, positions: positionsSvg };
 
-  function render(sym, instrument) {
+  function render(sym, instrumentId) {
     const e = lookup(sym);
     if (!e) return null;
-    try { return RENDERERS[instrument](e); } catch (err) { return null; }
+    const ins = INSTRUMENTS.find((i) => i.id === instrumentId);
+    if (!ins || !e[ins.id]) return null;
+    try { return TYPE_RENDERERS[ins.type](e[ins.id]); } catch (err) { return null; }
   }
 
-  window.OSO_DIAGRAMS = { lookup, render, INSTRUMENTS: ["guitar", "ukulele", "piano", "bass"] };
+  window.OSO_DIAGRAMS = { lookup, render, available, INSTRUMENTS };
 })();

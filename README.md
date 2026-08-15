@@ -81,6 +81,9 @@ tools/              tiny build helpers (regenerate shapes.js)
 
 ## Roadmap
 
+- **More instruments** — the switcher is pluggable (see CONTRIBUTING.md);
+  mandolin and banjo shape sets are in progress and will appear automatically
+  when their data lands in `shapes/`
 - **Server-grade detection** — CREMA chord model as an optional import lane
   (our benchmarks: CREMA 99.6% on a known-canon test vs 95.7% for the runner-up)
 - **Swarm publishing** — decentralized, permanent songbook pages

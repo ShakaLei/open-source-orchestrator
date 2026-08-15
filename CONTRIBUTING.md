@@ -55,6 +55,18 @@ labeled as drafts awaiting blessing.
 - Keep it in the spirit of the place: **no ads, no trackers, no paywalls, no
   monetization — ever.** This is a mission, not a product.
 
+## Add an instrument 🎸🪕
+
+The instrument switcher is pluggable — an instrument is just:
+
+1. per-chord data under a new field in `shapes/*.json` (e.g. `"mandolin": { "frets": …, "tuning": "GDAE" }`)
+2. `python3 tools/build_shapes_bundle.py`
+3. one entry in the `INSTRUMENTS` config at the top of `assets/diagrams.js`
+   (types: `fretted` — any string count · `keyboard` · `positions`)
+
+Buttons appear automatically once at least one chord carries the field.
+Mandolin (GDAE) and banjo (open-G) shape sets are already in progress.
+
 ## Ideas we'd love help with
 
 - more chord shapes (extended/altered chords, left-handed diagrams)

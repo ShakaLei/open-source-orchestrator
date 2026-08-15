@@ -423,11 +423,16 @@
       if (pop.style.display === "block" && !pop.contains(ev.target) && !ev.target.closest(".chip, .word")) closePop();
     });
 
-    // transpose + instruments
+    // transpose + instruments (buttons come from the pluggable config in diagrams.js)
     $("tr-down").addEventListener("click", () => transposeAll(-1));
     $("tr-up").addEventListener("click", () => transposeAll(1));
-    document.querySelectorAll(".instr button").forEach((b) => {
-      b.addEventListener("click", () => { S.instrument = b.dataset.inst; renderDiagrams(); });
+    const avail = window.OSO_DIAGRAMS.available();
+    if (avail.length && !avail.some((i) => i.id === S.instrument)) S.instrument = avail[0].id;
+    $("instr-btns").insertAdjacentHTML("beforeend",
+      avail.map((i) => `<button data-inst="${i.id}"${i.id === S.instrument ? ' class="on"' : ""}>${i.label}</button>`).join(""));
+    $("instr-btns").addEventListener("click", (ev) => {
+      const b = ev.target.closest("button[data-inst]");
+      if (b) { S.instrument = b.dataset.inst; renderDiagrams(); }
     });
 
     // exports
