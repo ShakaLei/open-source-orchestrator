@@ -1,4 +1,4 @@
-/* detect.js — 🧪 EXPERIMENTAL in-browser chord detection. CC0.
+/* detect.js — 🧪 EXPERIMENTAL in-browser chord detection. GPL-3.0.
  * FFT → chroma → 36 chord templates (maj / min / dom7), median-smoothed,
  * plus a Krumhansl key guess. Descended from the karaokeprotocol engine.
  * A rough first ear only — server-grade detection (CREMA) is the roadmap.

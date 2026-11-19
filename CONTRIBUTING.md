@@ -36,7 +36,7 @@ One folder per artist, ChordPro files inside, one line in the index:
 
 **The artist's word is law.** Please only submit songbooks you have the right
 to share: your own songs, songs whose artist asked you to, or public-domain
-material. Everything in the catalog is CC0, so the artist must be genuinely
+material. Everything in the catalog is copyleft, so the artist must be genuinely
 happy with that. Machine-detected drafts are welcome as long as they're
 labeled as drafts awaiting blessing.
 

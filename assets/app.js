@@ -1,5 +1,5 @@
 /* app.js — Open Source Orchestrator v0
- * paste / import → review & bless → publish. Everything client-side. CC0.
+ * paste / import → review & bless → publish. Everything client-side. Copyleft.
  */
 (function () {
   "use strict";

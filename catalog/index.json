@@ -1,6 +1,6 @@
 {
   "catalog": "Open Source Orchestrator — community songbook catalog",
-  "license": "CC0 — every songbook here is shared freely, with the artist's blessing",
+  "license": "copyleft — every songbook here is shared freely, with the artist's blessing",
   "how_to_add": "see CONTRIBUTING.md — add a folder under catalog/ with your ChordPro files and list it here",
   "artists": [
     {

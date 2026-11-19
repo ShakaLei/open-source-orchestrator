@@ -1,7 +1,7 @@
 /* diagrams.js — render chord-shape entries (shapes/*.json schema) as inline SVG.
  * Diagram types: fret grids (guitar/uke/mandolin), banjo grid with g-drone
  * column, mini piano, bass positions.
- * JS port of shapes/render_diagram.py (CC0). Black-on-white, print-friendly.
+ * JS port of shapes/render_diagram.py (copyleft). Black-on-white, print-friendly.
  */
 (function () {
   "use strict";

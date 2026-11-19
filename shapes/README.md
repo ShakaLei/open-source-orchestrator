@@ -85,7 +85,7 @@ enforced by build-time validation of every fret against the chord's pitch classe
 | piano notes | computed (interval spelling), cross-validated against chordbook piano note names | — |
 | bass positions | computed (root/fifth/octave geometry on EADG) | — |
 | curated overrides | BACH, verified against standard public chord charts | — |
-| **this database & diagrams** | ʻohana output | **CC0** |
+| **this database & diagrams** | ʻohana output | **copyleft** |
 
 ⚠️ **Upstream bug found:** chordbook's `piano.json` `midi` arrays silently drop
 accidentals (e.g. Cm → `[60, 67]`, missing Eb 63). We validate against their note-name
