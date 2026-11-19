@@ -115,7 +115,7 @@
   "mandolin": "computed (BACH first-position search); cross-checked: en.wikibooks.org Mandolin/Chords + mandolinchords.net chart",
   "banjo": "computed (BACH first-position search); validated vs pitch classes; drone convention documented"
  },
- "license": "CC0",
+ "license": "CC-BY-SA-4.0",
  "mandolin": {
   "frets": [
    0,
