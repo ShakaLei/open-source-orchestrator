@@ -8,8 +8,8 @@
 {comment: Verse 1 · Onchain Summer}
 [A]Onchain [D]summer, riding [G]on a [D]train,
 [A]Writing [D]a song I [G]can mint on [D]chain.
-[A]Whenever [D]I'm asked [G]where I'm [D]based,
-[A]As [D]a nomad I [G]say: out of my [D]suitcase.
+[A]Whenever I'm asked [D]where I'm based,
+[G]As a nomad I say: [D]out of my suitcase.
 [A]However, [D]this [G]onchain [D]summer,
 [A]It [D]ain't [G]the only [D]place —
 [A]I'm [D]also building, [G]building on [D]Base.
@@ -18,8 +18,8 @@
 [A]Onchain [D]October, I was [G]living in Chiang [D]Mai,
 [A]With [D]pop-up [G]cities all [D]over,
 [A]Zuzalu [D]culture [G]is [D]alive.
-[A]Whenever [D]I'm asked [G]where I'm [D]based,
-[A]As [D]a ZuNomad I [G]say: the next Zu [D]place.
+[A]Whenever I'm asked [D]where I'm based,
+[G]As a ZuNomad I say: [D]the next Zu place.
 [A]However, [D]this [G]onchain [D]October,
 [A]I'm [D]building in [G]my favorite [D]space.
 
