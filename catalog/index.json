@@ -66,13 +66,23 @@
     {
       "name": "Shaka Lei Kaumaka",
       "dir": "shaka-lei-kaumaka",
-      "note": "The bard's own songbook — full words and chords. Every chord loop is Shaka's canon: Todo Es Posible C→Cmaj7→F→F (artist-blessed ✓), A Planet We Share As One C–G–D–D in G (blessed 23 Sep 2026), Butterflies and Love G–Em–C–D, Onchain Summer A–D–G–D (new, 24 Nov 2026). Where each change lands is the ʻohana's guide — follow the singer. 🌈 Rainbow chords: red is always the root 1.",
+      "note": "The bard's own songbook — full words and chords. Every chord loop is Shaka's canon: Todo Es Posible C→Cmaj7→F→F (artist-blessed ✓), A Planet We Share As One C–G–D–D in G (blessed 23 Sep 2026), Butterflies and Love G–Em–C–D, Onchain Summer A–D–G–D (new, 24 Nov 2026); the 2023 ETHGlobal Anthem and Bangalore Beep Beep carry chords heard by the ʻohana's ear — drafts until he blesses. Where each change lands is the ʻohana's guide — follow the singer. 🌈 Rainbow chords: red is always the root 1.",
       "status": "canon loops ✓ — placements are a guide",
       "songs": [
         {
           "title": "Onchain Summer",
           "file": "onchain-summer.pro",
           "status": "new 24 Nov 2026 · words ✓ · loop A–D–G–D (Shaka) ✓"
+        },
+        {
+          "title": "The ETHGlobal Anthem (2023)",
+          "file": "ethglobal-anthem.pro",
+          "status": "words ✓ (lyric cards + sung take) · chords = machine draft (MORRICONE 🎧), awaiting the bard"
+        },
+        {
+          "title": "Bangalore Beep Beep (The Push Song, 2023)",
+          "file": "bangalore-beep-beep.pro",
+          "status": "words transcribed from the live take · A–D loop = machine draft, awaiting the bard"
         },
         {
           "title": "A Planet We Share As One",
