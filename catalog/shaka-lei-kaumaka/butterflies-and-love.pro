@@ -1,95 +1,65 @@
 {title: Butterflies and Love}
 {artist: Shaka Lei Kaumaka}
 {key: G}
-{comment: CHORD PROGRESSION = ARTIST CANON ✓ G – Em – C – D (Shaka, kprot beta). LYRICS OFFICIAL ✓ (shaka--butterflies-and-love.md)}
-{comment: Chord PLACEMENTS machine-aligned (CREMA on full mix + whisper word timing, 2026-08-15) — awaiting artist blessing of placements}
-{comment: CREMA independently heard the exact canon loop: key G, 100% diatonic, core G–Em–C–D — the mislabeled audio (slug 'i-open-sourced-my-whole-universe') is confirmed to be this song}
+{comment: Chord loop blessed by the bard: G – Em – C – D · where each change lands is the ʻohana's guide (24 Nov 2026) — follow the singer}
+{comment: Words & music by Shaka Lei Kaumaka · CC BY-SA 4.0 (Shaka's words)}
+{comment: 🌈 rainbow chords in the Orchestrator and on shakaleikaumaka.com/songbook — red is always the root 1}
 
-{comment: Intro (0:01)}
-| Em | C | D | G |  (x9)  then  | Em | C | D |
+[G]Hey Solana
+[Em]We can be [C]your (blockchain)
+[D](soy boy) big brother
+[G]We don't need [Em]to fight a war
+[C]for users and developers
+[D]We build apps that [G]bridge us all together
+[Em]Competition can be over
+[C]Because Ethereum
+[D]Is a positive Sum
+[G]Built by [Em]and for everyone
 
-Hey [G]Solana
-[Em]We can be your (blockchain)
-(soy boy) big [C]brother
-[D]We don't need to fight a [G]war
-for [Em]users and [C]developers
-[D]We build apps that [G]bridge us all [Em]together
-[C]Competition can be [D]over
-[G]Because Ethereum
-[Em]Is a [C]positive Sum
-[G]Built by [Em]and
+[G]Hey Bitcoin
+[Em]Lucky you were never [C]called a shitcoin (altcoin)
+[D]you were the [G]first to inspire
+[Em]Our Ethereum co-creator
+[C]His magazine wasn't
+[D]just an [G]ordinary page turner
+[Em]Even though we don't
+[C]Know your founder
+[D]Vitalik found inspiration
+[G]From your magical ledger
 
-{comment: Instrumental (1:52)}
-| C |
+[G]We should [Em]only wage war
+[C]with butterflies and love
+[D]The infinite garden isn't [G]just a place for fun
+[Em]Decentralized
+[C]Permission-less
+[D]and open-sourced
+[G]Even with the layer [Em]one as our shield,
+[C]and the layer [D]two as our sword
+[G]All we need to [Em]wage in a war
+[C]Is butterflies and love
+[D]Because Ethereum is [G]a positive sum
+[Em]Built by [C]and for everyone
 
-[D]for everyone
+[G]Hey Ethereum
+[Em]I still love [C]you most of all
+[D]You are [G]the world computer
+[Em]Built by all [C]my brothers and sisters
+[D]Together we don't have [G]to fight a war
+[Em]All we need [C]is butterflies and love
+[D]To pollinate the infinite-garden
+[G]Which grows [Em]strong and tall
+[C]And make us [D]all look small
+[G]In the infinite garden
 
-Hey [G]Bitcoin
-[Em]Lucky you were never called a [C]shitcoin (altcoin)
-you were [D]the first to [G]inspire
-Our [Em]Ethereum
-[C]co-creator
-His [D]magazine wasn't
-[G]just an [Em]ordinary page [C]turner
-Even [D]though we don't
-[G]Know your founder
-Vitalik found [C]inspiration
-From your [D]magical [G]ledger
-
-{comment: Instrumental (2:28)}
-| Em | C | D | G |
-
-[Em]We should only wage [C]war
-with butterflies and [D]love
-The [G]infinite [Em]garden
-[C]isn't just a place for [D]fun
-[G]Decentralized
-[Em]Permission-less
-[C]and
-open-sourced
-[G]Even with the layer one [Em]as our shield,
-and [C]the layer two as our sword
-[D]All we
-[Em]need to wage in a [C]war
-[D]Is butterflies and [G]love
-Because [C]Ethereum is a [D]positive [G]sum
-
-{comment: Instrumental (3:23)}
-| Em | C | D | G | Em | C | D |
-
-Built [G]by and for everyone
-
-[Em]Hey Ethereum
-I still [C]love you most of [D]all
-[G]You are the world [Em]computer
-Built by [C]all my brothers and [D]sisters
-[G]Together we don't [Em]have to fight a [C]war
-[D]All we need is [G]butterflies and [Em]love
-To pollinate the
-infinite-garden
-[D]Which grows [G]strong and [Em]tall
-And make us all look [C]small
-In the [D]infinite [G]garden
-
-{comment: Instrumental (4:17)}
-| Em | C | D |
-
-Hey Aya 🌸
-[G]Don't [Em]let the arrows pointed [C]at ya
-[D]Ever pierce your [G]lovely heart
-From the [Em]start
-you were the [C]heart beat
-Of the [D]ethereum [G]foundation
-You [Em]taught us the power of [C]subtraction
-and your very [D]first [G]reaction
-Was that you [Em]didn't want a [C]title
-That's why we [D]have such fertile [G]soil
-For us all to grow [C]equal
-
-{comment: Instrumental (4:59)}
-| D | G | C | D | G | Em | C | D |
-
-In the [G]infinite [Em]garden
-
-{comment: Outro (5:21)}
-| C | D | G | Em |  (x10)  then  | C | Am | D | G | Em |  then  | C | D | G |  (x2)  then  | Em | C | D | G |  (x2)  then  | Em | C | D |
+[G]Hey Aya 🌸
+[Em]Don't let the [C]arrows pointed at ya
+[D]Ever pierce [G]your lovely heart
+[Em]From the start
+[C]you were [D]the heart beat
+[G]Of the ethereum foundation
+[Em]You taught us [C]the power of subtraction
+[D]and your [G]very first reaction
+[Em]Was that you [C]didn't want a title
+[D]That's why we [G]have such fertile soil
+[Em]For us all [C]to grow equal
+[D]In the infinite garden

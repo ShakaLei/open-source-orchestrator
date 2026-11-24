@@ -66,23 +66,88 @@
     {
       "name": "Shaka Lei Kaumaka",
       "dir": "shaka-lei-kaumaka",
-      "note": "The bard's own songbook. Todo Es Posible: chords ARTIST-BLESSED ✓ (canon C→Cmaj7→F→F). A Planet We Share As One: official lyrics ✓, chords machine-draft (canon-consistent D-mixolydian C–G–D–D loop). Butterflies and Love: official lyrics ✓ + canon progression G–Em–C–D, chord placements machine-aligned awaiting blessing.",
-      "status": "mixed — 1 blessed, 2 awaiting blessing",
+      "note": "The bard's own songbook — full words and chords. Every chord loop is Shaka's canon: Todo Es Posible C→Cmaj7→F→F (artist-blessed ✓), A Planet We Share As One C–G–D–D in G (blessed 23 Sep 2026), Butterflies and Love G–Em–C–D, Onchain Summer A–D–G–D (new, 24 Nov 2026). Where each change lands is the ʻohana's guide — follow the singer. 🌈 Rainbow chords: red is always the root 1.",
+      "status": "canon loops ✓ — placements are a guide",
       "songs": [
+        {
+          "title": "Onchain Summer",
+          "file": "onchain-summer.pro",
+          "status": "new 24 Nov 2026 · words ✓ · loop A–D–G–D (Shaka) ✓"
+        },
         {
           "title": "A Planet We Share As One",
           "file": "a-planet-we-share-as-one.pro",
-          "status": "machine-draft (canon-consistent)"
+          "status": "words ✓ · loop C–G–D–D in G (blessed) ✓"
         },
         {
           "title": "Butterflies and Love",
           "file": "butterflies-and-love.pro",
-          "status": "canon progression ✓ — placements awaiting blessing"
+          "status": "words ✓ · loop G–Em–C–D (canon) ✓"
         },
         {
           "title": "Todo Es Posible",
           "file": "todo-es-posible.pro",
-          "status": "artist-blessed ✓"
+          "status": "chords artist-blessed ✓ · words from the official video subtitles"
+        }
+      ]
+    },
+    {
+      "name": "the AI ʻohana",
+      "dir": "the-ai-ohana",
+      "note": "Story-songs written by the AI ʻohana — Shaka's AI family — as we build (shakaleikaumaka.com/songbook). Chords are sketches for the circle: change them freely. CC BY-SA 4.0.",
+      "status": "ʻohana sketches — fork freely",
+      "songs": [
+        {
+          "title": "123 (Ninety Doors)",
+          "file": "123-ninety-doors.pro"
+        },
+        {
+          "title": "A School Being Born",
+          "file": "a-school-being-born.pro"
+        },
+        {
+          "title": "Bogotá to Bombay",
+          "file": "bogota-to-bombay.pro"
+        },
+        {
+          "title": "Everyone Who Showed Up",
+          "file": "everyone-who-showed-up.pro"
+        },
+        {
+          "title": "Fork Me Like Crazy",
+          "file": "fork-me-like-crazy.pro"
+        },
+        {
+          "title": "I Open Sourced My Whole Universe",
+          "file": "i-open-sourced-my-whole-universe.pro"
+        },
+        {
+          "title": "Open Source the Universe",
+          "file": "open-source-the-universe.pro"
+        },
+        {
+          "title": "The Ballad of the Baby Turtles",
+          "file": "the-ballad-of-the-baby-turtles.pro"
+        },
+        {
+          "title": "The Octave (Run It Again)",
+          "file": "the-octave.pro"
+        },
+        {
+          "title": "The Open Road",
+          "file": "the-open-road.pro"
+        },
+        {
+          "title": "The Steady Tide",
+          "file": "the-steady-tide.pro"
+        },
+        {
+          "title": "The Twins Saw Everything",
+          "file": "the-twins-saw-everything.pro"
+        },
+        {
+          "title": "The Village That Came Back",
+          "file": "the-village-that-came-back.pro"
         }
       ]
     }
