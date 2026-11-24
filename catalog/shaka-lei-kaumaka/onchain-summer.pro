@@ -6,34 +6,34 @@
 {comment: 🌈 rainbow chords in the Orchestrator and on shakaleikaumaka.com/songbook — red is always the root 1}
 
 {comment: Verse 1 · Onchain Summer}
-[A]Onchain summer, riding [D]on a train,
-[G]Writing a song I [D]can mint on chain.
-[A]Whenever I'm asked [D]where I'm based,
-[G]As a nomad I [D]say: out of my suitcase.
-[A]However, this onchain summer,
-[D]It ain't [G]the only place —
-[D]I'm also building, [A]building on Base.
+[A]Onchain summer, [D]riding [G]on a [D]train,
+[A]Writing a [D]song I [G]can mint [D]on chain.
+[A]Whenever I'm [D]asked [G]where [D]I'm based,
+[A]As a [D]nomad I [G]say: out of [D]my suitcase.
+[A]However, [D]this [G]onchain [D]summer,
+[A]It ain't [D]the only [G]place —[D]
+[A]I'm also [D]building, [G]building [D]on Base.
 
 {comment: Verse 2 · Onchain October}
-[A]Onchain October, I was [D]living in Chiang Mai,
-[G]With pop-up [D]cities all over,
-[A]Zuzalu culture is alive.
-[D]Whenever I'm asked [G]where I'm based,
-[D]As a ZuNomad I [A]say: the next Zu place.
-[D]However, this onchain October,
-[G]I'm building in [D]my favorite space.
+[A]Onchain October, [D]I was [G]living in [D]Chiang Mai,
+[A]With [D]pop-up [G]cities all [D]over,
+[A]Zuzalu [D]culture [G]is alive.[D]
+[A]Whenever I'm [D]asked [G]where [D]I'm based,
+[A]As a [D]ZuNomad I [G]say: the next [D]Zu place.
+[A]However, [D]this [G]onchain [D]October,
+[A]I'm building [D]in my [G]favorite [D]space.
 
 {comment: Verse 3 · Onchain November}
-[A]Onchain November, we packed a [D]bus with lots of friends,
-[G]We took the road down to [D]Devcon, thanks to the EF grants.
-[A]The instruments are permissionless
-[D]In the Open [G]Source Orchestra music space —
-[D]Just like [A]building on Base. :)
+[A]Onchain November, [D]we packed a [G]bus with lots [D]of friends,
+[A]We took the [D]road down to [G]Devcon, thanks to [D]the EF grants.
+[A]The instruments [D]are permissionless[G] [D]
+[A]In the [D]Open Source [G]Orchestra [D]music space —
+[A]Just [D]like [G]building on [D]Base. :)
 
 {comment: Verse 4 · Onchain Forever 🎻}
-[A]Onchain forever: Kuba [D]and his violin,
-[G]Playing around a Roudnice fire, [D]singing Czech songs with our friends.
-[A]Though he passed, [D]it was too fast,
-[G]His memory [D]will always last.
-[A]Our dear [D]friend and fiddler,
-[G]Forever minted on chain.
+[A]Onchain forever: [D]Kuba [G]and his [D]violin,
+[A]Playing around a [D]Roudnice fire, singing [G]Czech songs [D]with our friends.
+[A]Though he [D]passed, it [G]was too [D]fast,
+[A]His memory [D]will [G]always [D]last.
+[A]Our dear [D]friend [G]and fiddler,[D]
+[A]Forever [D]minted [G]on chain.[D]

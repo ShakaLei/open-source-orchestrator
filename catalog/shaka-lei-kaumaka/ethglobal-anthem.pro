@@ -16,7 +16,7 @@
 [C]Yeah, and this [G]is how the [D]ETHGlobal Playbook goes:
 [C]Onboard [G]thousands into [D]Web3,
 [C]The whole [G]world has [D]accessibility,
-[Bm]Never compromise [C]quality,
+[Bm]Never compromise [C]quality,[D]
 [C]Create more [G]than we're [D]capturing.
 
 {comment: The tag}
