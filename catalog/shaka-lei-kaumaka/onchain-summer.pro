@@ -9,31 +9,31 @@
 [A]Onchain [D]summer, riding [G]on a [D]train,
 [A]Writing [D]a song I [G]can mint on [D]chain.
 [A]Whenever [D]I'm asked [G]where I'm [D]based,
-[A]As a [D]nomad I [G]say: out of my [D]suitcase.
+[A]As [D]a nomad I [G]say: out of my [D]suitcase.
 [A]However, [D]this [G]onchain [D]summer,
-[A]It ain't [D]the only [G]place —[D]
-[A]I'm also [D]building, [G]building on [D]Base.
+[A]It [D]ain't [G]the only [D]place —
+[A]I'm [D]also building, [G]building on [D]Base.
 
 {comment: Verse 2 · Onchain October}
 [A]Onchain [D]October, I was [G]living in Chiang [D]Mai,
 [A]With [D]pop-up [G]cities all [D]over,
-[A]Zuzalu [D]culture [G]is alive.[D]
+[A]Zuzalu [D]culture [G]is [D]alive.
 [A]Whenever [D]I'm asked [G]where I'm [D]based,
-[A]As a [D]ZuNomad I [G]say: the next Zu [D]place.
+[A]As [D]a ZuNomad I [G]say: the next Zu [D]place.
 [A]However, [D]this [G]onchain [D]October,
-[A]I'm building [D]in my [G]favorite [D]space.
+[A]I'm [D]building in [G]my favorite [D]space.
 
 {comment: Verse 3 · Onchain November}
 [A]Onchain [D]November, we packed a [G]bus with lots of [D]friends,
-[A]We took [D]the road down to [G]Devcon, thanks to the EF [D]grants.
-[A]The instruments [D]are permissionless[G] [D]
-[A]In the [D]Open [G]Source Orchestra music [D]space —
+[A]We [D]took the road down to [G]Devcon, thanks to the EF [D]grants.
+[A]The [D]instruments [G]are [D]permissionless
+[A]In [D]the Open [G]Source Orchestra music [D]space —
 [A]Just [D]like [G]building on [D]Base. :)
 
 {comment: Verse 4 · Onchain Forever 🎻}
 [A]Onchain [D]forever: Kuba [G]and his [D]violin,
 [A]Playing [D]around a Roudnice fire, [G]singing Czech songs with our [D]friends.
 [A]Though [D]he passed, [G]it was too [D]fast,
-[A]His memory [D]will [G]always [D]last.
-[A]Our dear [D]friend [G]and fiddler,[D]
-[A]Forever [D]minted [G]on chain.[D]
+[A]His [D]memory [G]will always [D]last.
+[A]Our [D]dear [G]friend and [D]fiddler,
+[A]Forever [D]minted [G]on [D]chain.

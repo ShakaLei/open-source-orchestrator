@@ -1,4 +1,4 @@
-/*! OSO chart-tools v1.0 — rainbow chords (Shaka-style 1-7 colour theory · 3·6·9),
+/*! OSO chart-tools v1.2 — rainbow chords (Shaka-style 1-7 colour theory · 3·6·9),
  *  auto-scroll stage (slow ↔ fast), screen/word colours, word size, fonts.
  *  Built by Open Source Orchestra: Shaka Lei Kaumaka & the AI ʻohana (https://opensourceorchestra.org)
  *  SPDX-License-Identifier: GPL-3.0-or-later
@@ -68,7 +68,7 @@
     poster: { label: "Poster bold", css: "Impact,'Arial Black','Haettenschweiler',sans-serif" },
     mono: { label: "Typewriter", css: "'Courier New',ui-monospace,Menlo,monospace" }
   };
-  var P = { theme: "page", bg: "#101018", ink: "#ffffff", font: "page", scale: 1, rainbow: true, chords: true, speed: 28 };
+  var P = { chord: 1, theme: "page", bg: "#101018", ink: "#ffffff", font: "page", scale: 1, rainbow: true, chords: true, speed: 28 };
   try { var saved = JSON.parse(localStorage.getItem(LS) || "{}"); for (var k in saved) if (k in P) P[k] = saved[k]; } catch (e) {}
   function save() { try { localStorage.setItem(LS, JSON.stringify(P)); } catch (e) {} }
 
@@ -85,6 +85,11 @@
     ".ct-rb .ct-chord{color:#111!important;background:var(--ct-c,#f0b429);border-radius:.45em;padding:0 .32em!important}",
     ".ct-rb .ct-chord.ct-grad{background:var(--ct-c)}",
     ".ct-chord sup{font-size:.62em;margin-left:.12em;opacity:.8;vertical-align:.45em}",
+    // v1.1 — big chords you can read from across the room (🎸− / 🎸+ to taste)
+    ".cd b.ct-chord{font-size:calc(1.25em * var(--ct-chord,1))!important;bottom:.62em!important;padding:.02em .3em!important;border-radius:.4em}",
+    ".verse p.chorded{line-height:calc(2.3 + 1.3 * var(--ct-chord,1))!important;padding-top:calc(.35em * var(--ct-chord,1))}",
+    "html.ct-nochords .verse p.chorded{line-height:1.75!important}",
+    ".chip.has.ct-chord{font-size:calc(18px * var(--ct-chord,1))!important;line-height:1.2}",
     "html.ct-nochords .cd{display:none}",
     "html.ct-nochords .verse p.chorded{line-height:1.75}",
     "html.ct-themed body{background:var(--ct-bg)!important}",
@@ -142,7 +147,7 @@
       if (!sup) { sup = el("sup", { "class": "ct-deg", "aria-hidden": "true" }); b.appendChild(sup); }
       if (sup.textContent !== d.label) sup.textContent = d.label; // no-op writes would wake the observer forever
     });
-    painting = false;
+    painting = false; relayout();
   }
   function legend(box) {
     var h = home(songKey()); if (h === null) { box.innerHTML = ""; return; }
@@ -156,6 +161,31 @@
     box.innerHTML = out;
   }
 
+  // ---------------------------------------------------------------- make room: big chords never overlap
+  // Chords keep their exact landing word; if a chord would bump into the next one on the same line,
+  // the words in between are spread (the gap opens in the lyric line, like a hand-written chart).
+  var lay = 0;
+  function layout(root) {
+    var scope = root || document;
+    var marks = $$(".cd", scope);
+    marks.forEach(function (m) { m.style.marginLeft = ""; });
+    var prev = null;
+    marks.forEach(function (m) {
+      var b = m.querySelector("b"); if (!b || b.offsetParent === null) { prev = null; return; }
+      if (prev && prev.p === m.closest("p")) {
+        var pr = prev.b.getBoundingClientRect(), cr = b.getBoundingClientRect();
+        if (Math.abs(pr.top - cr.top) < 4) {
+          var need = pr.right + 6 - cr.left;
+          if (need > 0) { m.style.marginLeft = Math.ceil(need) + "px"; }
+        }
+      }
+      prev = { b: b, p: m.closest("p") };
+    });
+  }
+  function relayout() { cancelAnimationFrame(lay); lay = requestAnimationFrame(function () { layout(); if (stage) layout(stage); }); }
+  window.addEventListener("resize", relayout);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(relayout);
+
   // ---------------------------------------------------------------- apply prefs
   function apply() {
     var R = document.documentElement, t = THEMES[P.theme] || THEMES.page;
@@ -166,6 +196,7 @@
     var f = FONTS[P.font] || FONTS.page;
     R.classList.toggle("ct-font", !!f.css); if (f.css) R.style.setProperty("--ct-font", f.css);
     R.classList.toggle("ct-scaled", P.scale !== 1); R.style.setProperty("--ct-scale", String(P.scale));
+    R.style.setProperty("--ct-chord", String(P.chord));
     R.classList.toggle("ct-rb", !!P.rainbow);
     R.classList.toggle("ct-nochords", !P.chords);
     $$(".ct-rbtog").forEach(function (b) { b.setAttribute("aria-pressed", String(!!P.rainbow)); });
@@ -174,10 +205,11 @@
     $$(".ct-fontsel").forEach(function (s) { s.value = P.font; });
     $$(".ct-col").forEach(function (l) { l.style.display = P.theme === "custom" ? "" : "none"; });
     $$(".ct-speed").forEach(function (s) { s.textContent = speedLabel(); });
-    save();
+    save(); relayout();
   }
   function speedLabel() { return (P.speed < 14 ? "🐢 " : P.speed > 60 ? "🐇 " : "🎸 ") + Math.round(P.speed) + " px/s"; }
   function size(d) { P.scale = Math.max(0.7, Math.min(3, Math.round((P.scale + d) * 100) / 100)); apply(); }
+  function csize(d) { P.chord = Math.max(0.6, Math.min(3, Math.round((P.chord + d) * 100) / 100)); apply(); }
   function speed(f) { P.speed = Math.max(4, Math.min(240, P.speed * f)); apply(); }
 
   function selects() {
@@ -196,6 +228,8 @@
   function common(bar) {
     bar.appendChild(el("button", { type: "button", title: "smaller words", on: { click: function () { size(-0.1); } } }, "A−"));
     bar.appendChild(el("button", { type: "button", title: "bigger words", on: { click: function () { size(0.1); } } }, "A+"));
+    bar.appendChild(el("button", { type: "button", title: "smaller chords", on: { click: function () { csize(-0.2); } } }, "🎸−"));
+    bar.appendChild(el("button", { type: "button", title: "bigger chords — read them from across the room", on: { click: function () { csize(0.2); } } }, "🎸+"));
     selects().forEach(function (n) { bar.appendChild(n); });
     bar.appendChild(el("button", { type: "button", "class": "ct-rbtog", "aria-pressed": "true", title: "rainbow chords on/off", on: { click: function () { P.rainbow = !P.rainbow; apply(); } } }, "🌈 rainbow"));
     bar.appendChild(el("button", { type: "button", "class": "ct-chtog", "aria-pressed": "true", title: "chords on/off (words only)", on: { click: function () { P.chords = !P.chords; apply(); } } }, "🎸 chords"));
